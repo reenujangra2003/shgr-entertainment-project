@@ -37,7 +37,7 @@ export default function OurFocusGenres() {
             className="relative overflow-hidden bg-[var(--ivory)] py-5 sm:py-7 md:py-8 lg:py-10"
             id="genres"
         >
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 {/* Section Heading */}
                 <div className="mx-auto mb-[35px] max-w-[720px] text-center sm:mb-10 lg:mb-[55px]">

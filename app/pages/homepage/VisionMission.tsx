@@ -42,7 +42,7 @@ export default function VisionMission() {
       className={`relative overflow-hidden bg-[var(--ivory)] py-[50px] sm:py-[60px] md:py-[75px] lg:py-[90px] lg:pb-[100px] ${styles.sectionBackground}`}
       id="vision-mission"
     >
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
         <div className="mx-auto mb-8 text-center sm:mb-10 lg:mb-12">
@@ -130,17 +130,17 @@ export default function VisionMission() {
                 const Icon = item.icon;
 
                 return (
-                 <div
-  className="group grid grid-cols-[48px_2px_minmax(0,1fr)] items-center gap-[10px] border-b border-[rgba(201,138,8,0.18)] px-0 py-4 transition-colors duration-300 last:border-b-0 sm:grid-cols-[58px_2px_minmax(0,1fr)] sm:gap-[13px] md:grid-cols-[76px_2px_minmax(0,1fr)] md:gap-5 md:px-2 md:py-[17px]"
-  key={item.title}
->
-                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--cream)] text-[var(--red-dark)] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-[var(--red-dark)] group-hover:text-white sm:h-[58px] sm:w-[58px] md:h-[76px] md:w-[76px] md:rounded-[15px]">
-  <Icon
-    size={27}
-    strokeWidth={1.6}
-    className="h-5 w-5 sm:h-[23px] sm:w-[23px] md:h-[27px] md:w-[27px]"
-  />
-</div>
+                  <div
+                    className="group grid grid-cols-[48px_2px_minmax(0,1fr)] items-center gap-[10px] border-b border-[rgba(201,138,8,0.18)] px-0 py-4 transition-colors duration-300 last:border-b-0 sm:grid-cols-[58px_2px_minmax(0,1fr)] sm:gap-[13px] md:grid-cols-[76px_2px_minmax(0,1fr)] md:gap-5 md:px-2 md:py-[17px]"
+                    key={item.title}
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--cream)] text-[var(--red-dark)] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-[var(--red-dark)] group-hover:text-white sm:h-[58px] sm:w-[58px] md:h-[76px] md:w-[76px] md:rounded-[15px]">
+                      <Icon
+                        size={27}
+                        strokeWidth={1.6}
+                        className="h-5 w-5 sm:h-[23px] sm:w-[23px] md:h-[27px] md:w-[27px]"
+                      />
+                    </div>
 
                     <div className="h-[38px] w-0.5 bg-[var(--gold-dark)] md:h-[42px]" />
 

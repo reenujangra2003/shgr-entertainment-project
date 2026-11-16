@@ -116,7 +116,7 @@ export default function Expertise() {
 
       {/* HERO */}
       <section className="relative bg-[radial-gradient(circle_at_85%_15%,rgba(249,197,38,0.13),transparent_28%),var(--ivory)] pt-14 sm:pt-16 lg:pt-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="pb-16 sm:pb-20 lg:pb-[95px]">
             <span className="mb-5 inline-block text-xs font-extrabold tracking-[2.5px] text-[var(--gold-dark)] sm:mb-[22px] sm:text-sm">
               OUR CREATIVE EXPERTISE

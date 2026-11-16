@@ -1,4 +1,5 @@
 
+import type { Metadata } from "next";
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
@@ -18,6 +19,17 @@ const manrope = Manrope({
   display: "swap",
 });
 
+export const metadata: Metadata = {
+  title: "SHGR Entertainment | Stories That Inspire",
+  description:
+    "SHGR Entertainment is an Indian film and web series production house creating devotional and fiction stories.",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +40,7 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${manrope.variable}`}>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

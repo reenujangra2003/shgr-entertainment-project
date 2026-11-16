@@ -36,7 +36,7 @@ export default function About() {
       className="relative w-full overflow-hidden bg-[var(--white)] py-[55px] sm:py-[65px] lg:py-[90px]"
       id="about"
     >
-      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-6">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Main About Content */}
         <div className="grid grid-cols-1 items-center gap-9 lg:grid-cols-[0.95fr_1.05fr] lg:gap-[70px]">

@@ -124,7 +124,7 @@ export default function Footer() {
       className="overflow-hidden bg-[var(--red-dark)] text-white"
       id="contact"
     >
-      <div className="mx-auto w-full max-w-7xl px-2 sm:px-4 lg:px-3">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Contact CTA */}
         <div className="flex flex-col items-start justify-between gap-7 border-b border-white/30 py-10 sm:py-12 lg:flex-row lg:items-center lg:py-9">

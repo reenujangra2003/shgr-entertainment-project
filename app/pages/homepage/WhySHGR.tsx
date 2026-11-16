@@ -68,7 +68,7 @@ export default function WhySHGR() {
 
       <div className={`pointer-events-none absolute -bottom-[150px] -left-[100px] h-[260px] w-[260px] rounded-full border border-[rgba(201,138,8,0.12)] ${styles.decoration}`} />
 
-      <div className="container relative z-[1] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-[1] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
         <div className="mx-auto mb-[35px] max-w-[720px] text-center sm:mb-10 lg:mb-[55px]">

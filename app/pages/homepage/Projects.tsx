@@ -41,7 +41,7 @@ export default function Projects() {
             id="projects"
             className="relative overflow-hidden bg-[#fffaf0] py-[55px] sm:py-[70px] md:py-[85px] lg:py-[105px]"
         >
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 {/* Section Heading */}
                 <div className="mb-[38px] grid grid-cols-1 items-end gap-6 sm:mb-12 md:grid-cols-[1.2fr_0.8fr] md:gap-[30px] lg:mb-[58px] lg:gap-[60px]">

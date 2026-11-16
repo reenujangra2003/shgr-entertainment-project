@@ -25,7 +25,7 @@ export default function Header() {
     <header className="sticky top-0 z-[1000] w-full border-b-1 border-b-[var(--gold)] bg-[var(--ivory)]">
 
       {/* Desktop / Mobile Header */}
-      <div className="relative mx-auto flex h-[70px] w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-[80px] lg:px-0">
+      <div className="relative mx-auto flex h-[70px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 lg:h-[80px] ">
 
         {/* Logo */}
         <Link
@@ -36,7 +36,7 @@ export default function Header() {
           <img
             src="/images/logo.png"
             alt="SHGR Entertainment"
-            className="h-[50px] w-[135px] object-contain lg:h-[55px] lg:w-[145px]"
+            className="h-[50px] object-contain lg:h-[55px]"
           />
         </Link>
 
@@ -100,7 +100,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <div
-        className={`absolute left-0 top-full w-full border-b border-[var(--border-gold)] bg-[var(--black)] px-5 shadow-[var(--shadow-dark)] transition-all duration-300 lg:hidden ${
+        className={`absolute left-0 top-full w-full border-b border-[var(--border-gold)] bg-[var(--black)] p-5 shadow-[var(--shadow-dark)] transition-all duration-300 lg:hidden ${
           menuOpen
             ? "visible translate-y-0 opacity-100"
             : "invisible pointer-events-none -translate-y-3 opacity-0"

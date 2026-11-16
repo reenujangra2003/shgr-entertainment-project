@@ -61,7 +61,7 @@ export default function WhatWeDo() {
       className="relative overflow-hidden bg-[var(--ivory)] py-[55px] sm:py-[65px] md:py-[75px] lg:py-[90px]"
       id="services"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
         <div className="mb-[35px] block md:mb-12 lg:mb-[55px] lg:flex lg:items-end lg:justify-between lg:gap-[45px]">

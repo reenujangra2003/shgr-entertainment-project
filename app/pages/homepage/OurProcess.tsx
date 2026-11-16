@@ -41,7 +41,7 @@ export default function OurProcess() {
       id="process"
       className={`relative overflow-hidden bg-[var(--white)] py-[45px] sm:py-[55px] md:py-[60px] lg:py-[75px] ${styles.reducedMotion}`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
         <div className="mb-[35px] block md:mb-[50px] lg:mb-[75px] lg:flex lg:items-end lg:justify-between lg:gap-[45px]">

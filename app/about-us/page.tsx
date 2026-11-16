@@ -57,7 +57,7 @@ export default function AboutUs() {
 
       {/* About Hero */}
       <section className="bg-[var(--ivory)] py-14 sm:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <span className="inline-block text-[12px] font-extrabold tracking-[2.5px] text-[var(--red-dark)] sm:text-sm">
               ABOUT SHGR ENTERTAINMENT

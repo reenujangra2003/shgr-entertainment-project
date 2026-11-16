@@ -109,7 +109,7 @@ export default function Partner() {
     <main className="overflow-hidden bg-white text-[var(--brown)]">
       {/* HERO */}
       <section className="relative bg-[radial-gradient(circle_at_85%_20%,rgba(249,197,38,0.15),transparent_28%),var(--ivory)] py-[75px] md:py-[90px]">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="pb-16 md:pb-24">
             <span className="mb-5 inline-block text-[14px] font-extrabold tracking-[2px] text-[var(--gold-dark)]">
               PARTNERSHIPS &amp; COLLABORATIONS

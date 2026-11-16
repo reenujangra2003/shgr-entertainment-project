@@ -54,7 +54,7 @@ export default function Collaborate() {
       className="overflow-hidden bg-white py-[55px] sm:py-[70px] md:py-20 lg:py-[100px]"
       id="collaborate"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Top Heading */}
         <div className="grid grid-cols-1 items-end gap-6 border-b border-[#e9dfd2] pb-10 sm:pb-[50px] md:grid-cols-[1.1fr_0.75fr] md:gap-[35px] lg:gap-20 lg:pb-[65px]">
