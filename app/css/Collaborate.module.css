@@ -1,0 +1,58 @@
+
+/* ========================================
+   COLLABORATION CARD
+======================================== */
+
+.collaborateCard {
+  transition: background 0.3s ease;
+}
+
+/* ========================================
+   ICON HOVER
+======================================== */
+
+.collaborateCard:hover > div:first-child > div {
+  color: var(--white);
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+}
+
+/* ========================================
+   ANIMATED GOLDEN LINE
+======================================== */
+
+.cardLine {
+  width: 32px;
+  transition: width 0.3s ease;
+}
+
+.collaborateCard:hover .cardLine {
+  width: 65px;
+}
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.collaborateButton {
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.collaborateButton:hover {
+  background: var(--brown);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .collaborateCard,
+  .cardLine,
+  .collaborateButton {
+    transition: none !important;
+  }
+}

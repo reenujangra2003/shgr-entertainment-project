@@ -1,26 +1,128 @@
+
 @import "tailwindcss";
 
+/* ========================================
+   SHGR BRAND VARIABLES
+======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #F9C526;
+  --gold-light: #FFE27A;
+  --gold-dark: #C98A08;
+  --amber: #E99A08;
+
+  --red: #C91F32;
+  --red-dark: #941626;
+
+  --black: #171411;
+  --brown: #24150E;
+  --brown-light: #493020;
+
+  --ivory: #FFF8E9;
+  --cream: #FFF1D0;
+  --white: #FFFFFF;
+
+  --text-primary: #24150E;
+  --text-secondary: #746253;
+  --text-light: #FFF8E9;
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(
+    135deg,
+    #FFE27A 0%,
+    #F9C526 45%,
+    #E99A08 100%
+  );
+
+  --gradient-red: linear-gradient(
+    135deg,
+    #E63743,
+    #941626
+  );
+
+  --gradient-dark: linear-gradient(
+    135deg,
+    #171411,
+    #493020
+  );
+
+  /* Borders & Shadows */
+  --border-gold: rgba(249, 197, 38, 0.35);
+  --shadow-gold: 0 8px 30px rgba(201, 138, 8, 0.18);
+  --shadow-dark: 0 12px 35px rgba(23, 20, 17, 0.18);
+
+  /* Theme */
+  --background: var(--ivory);
+  --foreground: var(--text-primary);
 }
+
+/* ========================================
+   TAILWIND V4 THEME
+======================================== */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-amber: var(--amber);
+
+  --color-red: var(--red);
+  --color-red-dark: var(--red-dark);
+
+  --color-black: var(--black);
+  --color-brown: var(--brown);
+  --color-brown-light: var(--brown-light);
+
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-white: var(--white);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-light: var(--text-light);
+
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--black);
 }

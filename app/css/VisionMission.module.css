@@ -1,0 +1,51 @@
+
+/* Section Background Decoration */
+.sectionBackground {
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(249, 197, 38, 0.07),
+      transparent 28%
+    ),
+    var(--ivory);
+}
+
+.sectionBackground::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -70px;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(201, 138, 8, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Vision Image Hover */
+.visionImage img {
+  transition: transform 0.8s ease;
+}
+
+.visionImage:hover img {
+  transform: scale(1.045);
+}
+
+/* Vision Arrow Hover */
+.visionArrow {
+  transition: transform 0.3s ease;
+}
+
+.visionImage:hover ~ .visionArrow {
+  transform: translate(4px, -4px);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .visionImage img,
+  .visionArrow,
+  .missionItem,
+  .missionIcon {
+    transition: none !important;
+  }
+}

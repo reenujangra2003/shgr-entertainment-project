@@ -1,0 +1,36 @@
+
+/* Service Card Hover */
+.serviceItem {
+  transition: background 0.3s ease;
+}
+
+.serviceItem:hover {
+  background: rgba(255, 241, 208, 0.48);
+}
+/* Service Icon Hover */
+.serviceIcon {
+  transition: transform 0.3s ease;
+}
+
+.serviceItem:hover .serviceIcon {
+  transform: translateY(-3px);
+}
+
+/* Accent Line Animation */
+.serviceLine {
+  transition: width 0.35s ease;
+}
+
+.serviceItem:hover .serviceLine {
+  width: 42px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .serviceItem,
+  .serviceIcon,
+  .serviceLine {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,10 @@
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .reducedMotion *,
+  .reducedMotion *::before,
+  .reducedMotion *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

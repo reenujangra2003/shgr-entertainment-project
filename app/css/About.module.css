@@ -1,0 +1,33 @@
+
+/* About Image Hover */
+
+.imageFrame img {
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.imageFrame:hover img {
+  transform: scale(1.04);
+}
+
+/* Creative Focus Icon */
+
+.valueIcon {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.valueIcon:hover {
+  transform: translateY(-3px);
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .imageFrame img,
+  .valueIcon {
+    transition: none;
+  }
+}

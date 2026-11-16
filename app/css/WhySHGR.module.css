@@ -1,0 +1,122 @@
+
+/* Main Card */
+.whyCard {
+  position: relative;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Golden Top Line */
+.whyCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+  transition: width 0.4s ease;
+}
+
+.whyCard:hover {
+  z-index: 2;
+  transform: translateY(-8px);
+  background: linear-gradient(
+    135deg,
+    var(--red-dark) 0%,
+    var(--brown) 100%
+  );
+  border-color: transparent;
+  box-shadow: 0 18px 40px rgba(23, 20, 17, 0.2);
+}
+
+.whyCard:hover::before {
+  width: 100%;
+}
+
+/* Number */
+.whyCard > div:first-child > span {
+  transition: color 0.3s ease;
+}
+
+/* Icon */
+.whyIcon {
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.whyCard:hover .whyIcon {
+  color: var(--brown);
+  background: var(--gradient-gold);
+  border-color: transparent;
+}
+
+/* Heading */
+.whyTitle {
+  transition: color 0.3s ease;
+}
+
+.whyCard:hover .whyTitle {
+  color: var(--white);
+}
+
+/* Description */
+.whyDescription {
+  transition: color 0.3s ease;
+}
+
+.whyCard:hover .whyDescription {
+  color: var(--white);
+}
+
+/* Footer */
+.whyCardBottom {
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.whyCard:hover .whyCardBottom {
+  color: var(--gold-light);
+  border-color: rgba(255, 226, 122, 0.3);
+}
+
+/* Footer Arrow */
+.whyCardBottom svg {
+  transition: transform 0.3s ease;
+}
+
+.whyCard:hover .whyCardBottom svg {
+  transform: translate(3px, -3px);
+}
+
+/* CTA Button */
+.footerLink {
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.footerLink:hover {
+  color: var(--white);
+  background: var(--gradient-red);
+}
+
+
+.decoration {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reducedMotion *,
+  .reducedMotion *::before,
+  .reducedMotion *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

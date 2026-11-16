@@ -1,0 +1,46 @@
+
+/* Genre Card Hover */
+.genreCard {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.genreCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Image Zoom */
+.genreImage {
+  transition: transform 0.7s ease;
+}
+
+.genreCard:hover .genreImage {
+  transform: scale(1.06);
+}
+
+/* Arrow Hover */
+.genreArrow {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.genreCard:hover .genreArrow {
+  background: var(--gradient-gold);
+  color: var(--brown);
+  border-color: transparent;
+  transform: rotate(45deg);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .genreCard,
+  .genreImage,
+  .genreArrow {
+    transition: none !important;
+  }
+}
