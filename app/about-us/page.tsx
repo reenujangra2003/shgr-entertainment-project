@@ -80,8 +80,8 @@ export default function AboutUs() {
 
       {/* Our Story */}
       <section className="bg-[var(--white)] py-16 sm:py-20 lg:py-[105px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-start gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 xl:gap-[95px]">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-start gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10 xl:gap-[15px]">
 
             {/* Story Heading */}
             <div>
@@ -135,7 +135,7 @@ export default function AboutUs() {
 
       {/* Core Values */}
       <section className="bg-[var(--ivory)] py-16 sm:py-20 lg:pt-[95px] lg:pb-[105px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* Section Heading */}
           <div className="mb-9 flex flex-col items-start justify-between gap-4 md:mb-11 lg:flex-row lg:items-end lg:gap-10">

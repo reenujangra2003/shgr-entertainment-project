@@ -147,7 +147,7 @@ export default function Services() {
         className="bg-[var(--white)] py-16 sm:py-20 lg:py-[50px]"
         id="services-detail"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* Section Heading */}
           <div className="mb-9 flex flex-col justify-between gap-4 md:mb-12 lg:flex-row lg:items-end lg:gap-10">

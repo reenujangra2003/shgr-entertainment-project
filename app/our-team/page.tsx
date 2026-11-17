@@ -99,13 +99,11 @@ export default function Team() {
       </section>
 
       {/* LEADERSHIP */}
-
-      {/* PROJECT LEADERSHIP & KEY PROFILES */}
       <section
         id="team-leadership"
         className="bg-white py-16 sm:py-20 lg:py-[105px]"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* SECTION HEADING */}
           <div className="mb-10 sm:mb-14">
@@ -311,170 +309,139 @@ export default function Team() {
       </section>
 
 
-      {/* CREATIVE TEAM */}
-     {/* CREATIVE DIRECTORS */}
-<section className="relative overflow-hidden bg-[#FFF8E9] py-16 sm:py-20 lg:py-28">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* CREATIVE TEAM */}=
+      <section className="relative overflow-hidden bg-[#FFF8E9] py-16 sm:py-20 lg:py-28">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-    {/* Section Heading */}
-    <div className="mb-12 flex flex-col justify-between gap-5 lg:mb-16 lg:flex-row lg:items-end">
-      <div>
-        <span className="mb-4 inline-block text-[10px] font-extrabold tracking-[3px] text-[var(--gold-dark)]">
-          THE CREATIVE FORCE
-        </span>
+          {/* Section Heading */}
+          <div className="mb-12 flex flex-col justify-between gap-5 lg:mb-16 lg:flex-row lg:items-end">
+            <div>
+              <span className="mb-4 inline-block text-[10px] font-extrabold tracking-[3px] text-[var(--gold-dark)]">
+                THE CREATIVE FORCE
+              </span>
 
-        <h2 className="font-heading text-[clamp(38px,5vw,66px)] leading-[1.08] text-[var(--brown)]">
-          Behind Every Story,
-          <span className="block italic text-[var(--red-dark)]">
-            A Vision.
-          </span>
-        </h2>
-      </div>
+              <h2 className="font-heading text-[clamp(38px,5vw,66px)] leading-[1.08] text-[var(--brown)]">
+                Behind Every Story,
+                <span className="block italic text-[var(--red-dark)]">
+                  A Vision.
+                </span>
+              </h2>
+            </div>
 
-      <p className="max-w-[390px] text-sm leading-7 text-[var(--text-secondary)]">
-        Meet the creative minds guiding our stories from imagination
-        to the screen, with a shared passion for meaningful cinema.
-      </p>
-    </div>
+            <p className="max-w-[390px] text-sm leading-7 text-[var(--text-secondary)]">
+              Meet the creative minds guiding our stories from imagination
+              to the screen, with a shared passion for meaningful cinema.
+            </p>
+          </div>
 
-    {/* Director 01 */}
-    <article className="group mb-8 grid overflow-hidden bg-[#24150E] lg:grid-cols-2">
+          {/* Director 01 */}
+          <article className="group mb-8 grid overflow-hidden bg-[#24150E] lg:grid-cols-2">
 
-      <div className="relative min-h-[420px] overflow-hidden sm:min-h-[550px] lg:min-h-[610px]">
-        <img
-          src="/images/jayant-director.png"
-          alt="Jayant - Director"
-          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.035]"
-        />
+            <div className="relative min-h-[420px] overflow-hidden sm:min-h-[550px] lg:min-h-[610px]">
+              <img
+                src="/images/jayant-director.png"
+                alt="Jayant - Director"
+                className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.035]"
+              />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
-        <span className="absolute bottom-6 left-7 font-heading text-6xl font-semibold text-white/35 sm:text-8xl">
-          01
-        </span>
-      </div>
+              <span className="absolute bottom-6 left-7 font-heading text-6xl font-semibold text-white/35 sm:text-8xl">
+                01
+              </span>
+            </div>
 
-      <div className="relative flex flex-col justify-center px-7 py-12 text-white sm:px-12 lg:px-14 lg:py-16">
-        <span className="mb-7 flex items-center gap-3 text-[10px] font-bold tracking-[2.5px] text-[var(--gold-light)]">
-          <span className="h-px w-9 bg-[var(--gold)]" />
-          DIRECTOR
-        </span>
+            <div className="relative flex flex-col justify-center px-7 py-12 text-white sm:px-12 lg:px-14 lg:py-16">
+              <span className="mb-7 flex items-center gap-3 text-[10px] font-bold tracking-[2.5px] text-[var(--gold-light)]">
+                <span className="h-px w-9 bg-[var(--gold)]" />
+                DIRECTOR
+              </span>
 
-        <h3 className="font-heading text-[clamp(42px,5vw,65px)] leading-[1.1]">
-          Jayant
-        </h3>
+              <h3 className="font-heading text-[clamp(42px,5vw,65px)] leading-[1.1]">
+                Jayant
+              </h3>
 
-        <p className="mt-7 max-w-[420px] text-sm leading-8 text-white/70">
-          Every story begins with an idea. Through creative direction
-          and a thoughtful approach to storytelling, Jayant brings
-          ideas to life, shaping narratives into engaging cinematic
-          experiences.
-        </p>
+              <p className="mt-7 max-w-[420px] text-sm leading-8 text-white/70">
+                Every story begins with an idea. Through creative direction
+                and a thoughtful approach to storytelling, Jayant brings
+                ideas to life, shaping narratives into engaging cinematic
+                experiences.
+              </p>
 
-        <div className="mt-10 flex items-center gap-4">
-          <span className="h-px w-12 bg-[var(--gold)]" />
-          <span className="text-[9px] font-bold tracking-[2px] text-[var(--gold-light)]">
-            CREATIVE VISION · STORYTELLING
-          </span>
-        </div>
+              <div className="mt-10 flex items-center gap-4">
+                <span className="h-px w-12 bg-[var(--gold)]" />
+                <span className="text-[9px] font-bold tracking-[2px] text-[var(--gold-light)]">
+                  CREATIVE VISION · STORYTELLING
+                </span>
+              </div>
 
-        <span className="pointer-events-none absolute bottom-3 right-7 font-heading text-[110px] leading-none text-white/[0.035] sm:text-[160px]">
-          J
-        </span>
-      </div>
-    </article>
+              <span className="pointer-events-none absolute bottom-3 right-7 font-heading text-[110px] leading-none text-white/[0.035] sm:text-[160px]">
+                J
+              </span>
+            </div>
+          </article>
 
-    {/* Director 02 */}
-    <article className="group grid overflow-hidden bg-[#24150E] lg:grid-cols-2">
+          {/* Director 02 */}
+          <article className="group grid overflow-hidden bg-[#24150E] lg:grid-cols-2">
 
-      <div className="relative order-1 flex flex-col justify-center px-7 py-12 text-white sm:px-12 lg:order-1 lg:px-14 lg:py-16">
-        <span className="mb-7 flex items-center gap-3 text-[10px] font-bold tracking-[2.5px] text-[var(--gold-light)]">
-          <span className="h-px w-9 bg-[var(--gold)]" />
-          DIRECTOR
-        </span>
+            <div className="relative order-1 flex flex-col justify-center px-7 py-12 text-white sm:px-12 lg:order-1 lg:px-14 lg:py-16">
+              <span className="mb-7 flex items-center gap-3 text-[10px] font-bold tracking-[2.5px] text-[var(--gold-light)]">
+                <span className="h-px w-9 bg-[var(--gold)]" />
+                DIRECTOR
+              </span>
 
-        <h3 className="font-heading text-[clamp(42px,5vw,65px)] leading-[1.1]">
-          Kaushis
-        </h3>
+              <h3 className="font-heading text-[clamp(42px,5vw,65px)] leading-[1.1]">
+                Kaushis
+              </h3>
 
-        <p className="mt-7 max-w-[420px] text-sm leading-8 text-white/70">
-          Great direction is about bringing every creative element
-          together. With a focus on narrative flow, visual expression
-          and audience connection, Kaushis contributes to shaping
-          stories for the screen.
-        </p>
+              <p className="mt-7 max-w-[420px] text-sm leading-8 text-white/70">
+                Great direction is about bringing every creative element
+                together. With a focus on narrative flow, visual expression
+                and audience connection, Kaushis contributes to shaping
+                stories for the screen.
+              </p>
 
-        <div className="mt-10 flex items-center gap-4">
-          <span className="h-px w-12 bg-[var(--gold)]" />
-          <span className="text-[9px] font-bold tracking-[2px] text-[var(--gold-light)]">
-            CREATIVE VISION · CINEMA
-          </span>
-        </div>
+              <div className="mt-10 flex items-center gap-4">
+                <span className="h-px w-12 bg-[var(--gold)]" />
+                <span className="text-[9px] font-bold tracking-[2px] text-[var(--gold-light)]">
+                  CREATIVE VISION · CINEMA
+                </span>
+              </div>
 
-        <span className="pointer-events-none absolute bottom-3 right-7 font-heading text-[110px] leading-none text-white/[0.035] sm:text-[160px]">
-          K
-        </span>
-      </div>
+              <span className="pointer-events-none absolute bottom-3 right-7 font-heading text-[110px] leading-none text-white/[0.035] sm:text-[160px]">
+                K
+              </span>
+            </div>
 
-      <div className="relative order-2 min-h-[420px] overflow-hidden sm:min-h-[550px] lg:min-h-[610px]">
-        <img
-          src="/images/kaushis-director.png"
-          alt="Kaushis - Director"
-          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.035]"
-        />
+            <div className="relative order-2 min-h-[420px] overflow-hidden sm:min-h-[550px] lg:min-h-[610px]">
+              <img
+                src="/images/kaushis-director.png"
+                alt="Kaushis - Director"
+                className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.035]"
+              />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
-        <span className="absolute bottom-6 right-7 font-heading text-6xl font-semibold text-white/35 sm:text-8xl">
-          02
-        </span>
-      </div>
-    </article>
+              <span className="absolute bottom-6 right-7 font-heading text-6xl font-semibold text-white/35 sm:text-8xl">
+                02
+              </span>
+            </div>
+          </article>
 
-    {/* Bottom Statement */}
-    <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-[var(--border-gold)] pt-8 sm:flex-row">
-      <p className="m-0 max-w-[520px] font-heading text-xl italic text-[var(--brown)] sm:text-2xl">
-        Two creative perspectives. One shared passion for cinema.
-      </p>
+          {/* Bottom Statement */}
+          <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-[var(--border-gold)] pt-8 sm:flex-row">
+            <p className="m-0 max-w-[520px] font-heading text-xl italic text-[var(--brown)] sm:text-2xl">
+              Two creative perspectives. One shared passion for cinema.
+            </p>
 
-      <span className="text-[9px] font-extrabold tracking-[2px] text-[var(--gold-dark)]">
-        SHGR ENTERTAINMENT
-      </span>
-    </div>
-
-  </div>
-</section>
-
-    
-
-      {/* CLOSING */}
-      <section className="bg-[var(--white)] py-16 text-center sm:py-20 lg:py-[85px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-          <span className="mb-5 inline-block text-[10px] font-extrabold tracking-[2px] text-[var(--gold-dark)] sm:text-xs">
-            BUILT THROUGH COLLABORATION
-          </span>
-
-          <h2 className="mx-auto mb-7 font-heading text-[clamp(34px,4.5vw,55px)] leading-[1.2]">
-            Every Story Begins
-            <span className="block italic text-[var(--red-dark)]">
-              With People.
+            <span className="text-[9px] font-extrabold tracking-[2px] text-[var(--gold-dark)]">
+              SHGR ENTERTAINMENT
             </span>
-          </h2>
-
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-5 bg-[var(--red-dark)] px-[22px] py-[15px] text-[10px] font-extrabold tracking-[1.2px] text-white no-underline transition-colors duration-300 hover:bg-[var(--brown)]"
-          >
-            WORK WITH US
-            <ArrowUpRight
-              size={18}
-              className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-            />
-          </a>
+          </div>
 
         </div>
       </section>
+
 
     </main>
   );

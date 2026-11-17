@@ -99,7 +99,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <div
-        className={`absolute left-0 top-full w-full border-b border-[var(--border-gold)] bg-[var(--black)] p-5 shadow-[var(--shadow-dark)] transition-all duration-300 lg:hidden ${menuOpen
+        className={`absolute left-0 top-full w-full border-b border-[var(--border-gold)] bg-[var(--red-dark)] p-5 shadow-[var(--shadow-dark)] transition-all duration-300 lg:hidden ${menuOpen
             ? "visible translate-y-0 opacity-100"
             : "invisible pointer-events-none -translate-y-3 opacity-0"
           }`}
@@ -131,7 +131,7 @@ export default function Header() {
           <Link
             href="/partner-form"
             onClick={closeMenu}
-            className="mt-5 flex h-[46px] items-center justify-center gap-3 rounded-[3px] bg-[image:var(--gradient-red)] font-body text-xs font-extrabold text-white"
+            className="mt-5 flex h-[46px] items-center justify-center gap-3 rounded-[3px] bg-[image:var(--gradient-gold)] font-body text-xs font-extrabold text-black"
           >
             Partner With Us
             <ArrowRight size={16} />

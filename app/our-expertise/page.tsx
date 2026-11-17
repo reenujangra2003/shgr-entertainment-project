@@ -16,41 +16,30 @@ import {
 } from "lucide-react";
 
 const devotionalApproach: {
-  icon: LucideIcon;
   title: string;
   description: string;
 }[] = [
-  {
-    icon: BookOpen,
-    title: "Research-led Scripts",
-    description:
-      "Stories are built from authentic sources, traditions and the guidance of subject experts.",
-  },
-  {
-    icon: Users,
-    title: "Cultural & Spiritual Consultation",
-    description:
-      "Sensitive subjects are reviewed with knowledgeable advisors before and during production.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Respectful Treatment",
-    description:
-      "Sacred figures, rituals and symbols are portrayed with dignity and understanding.",
-  },
-  {
-    icon: Music2,
-    title: "Cinematic Quality",
-    description:
-      "Music, locations, costume and design support the emotional and spiritual tone of the story.",
-  },
-  {
-    icon: Heart,
-    title: "Universal Appeal",
-    description:
-      "Stories are told so audiences of every age and background can connect with them.",
-  },
-];
+    {
+      title: "Research-led Scripts",
+      description:
+        "Stories are built from authentic sources, traditions and the guidance of subject experts.",
+    },
+    {
+      title: "Cultural & Spiritual Consultation",
+      description:
+        "Sensitive subjects are reviewed with knowledgeable advisors before and during production.",
+    },
+    {
+      title: "Respectful Treatment",
+      description:
+        "Sacred figures, rituals and symbols are portrayed with dignity and understanding.",
+    },
+    {
+      title: "Cinematic Quality",
+      description:
+        "Music, locations, costume and design support the emotional and spiritual tone of the story.",
+    },
+  ];
 
 const fictionGenres = [
   "Family & Relationship Dramas",
@@ -66,49 +55,49 @@ const formats: {
   title: string;
   description: string;
 }[] = [
-  {
-    number: "01",
-    icon: Film,
-    title: "Feature Films",
-    description:
-      "Theatrical and platform releases in devotional and fiction genres.",
-  },
-  {
-    number: "02",
-    icon: Tv,
-    title: "Web Series",
-    description:
-      "Multi-episode series created for OTT and digital platforms.",
-  },
-  {
-    number: "03",
-    icon: Play,
-    title: "Limited Series",
-    description:
-      "Story-driven series with a defined, compact run.",
-  },
-  {
-    number: "04",
-    icon: Video,
-    title: "Short Films",
-    description:
-      "Festival-ready and platform-ready short stories.",
-  },
-  {
-    number: "05",
-    icon: Sparkles,
-    title: "Devotional Shorts",
-    description:
-      "Spiritual and heritage content for digital audiences.",
-  },
-  {
-    number: "06",
-    icon: Clapperboard,
-    title: "Documentary-style Content",
-    description:
-      "Informative and heritage-based storytelling.",
-  },
-];
+    {
+      number: "01",
+      icon: Film,
+      title: "Feature Films",
+      description:
+        "Theatrical and platform releases in devotional and fiction genres.",
+    },
+    {
+      number: "02",
+      icon: Tv,
+      title: "Web Series",
+      description:
+        "Multi-episode series created for OTT and digital platforms.",
+    },
+    {
+      number: "03",
+      icon: Play,
+      title: "Limited Series",
+      description:
+        "Story-driven series with a defined, compact run.",
+    },
+    {
+      number: "04",
+      icon: Video,
+      title: "Short Films",
+      description:
+        "Festival-ready and platform-ready short stories.",
+    },
+    {
+      number: "05",
+      icon: Sparkles,
+      title: "Devotional Shorts",
+      description:
+        "Spiritual and heritage content for digital audiences.",
+    },
+    {
+      number: "06",
+      icon: Clapperboard,
+      title: "Documentary-style Content",
+      description:
+        "Informative and heritage-based storytelling.",
+    },
+  ];
 
 export default function Expertise() {
   return (
@@ -162,12 +151,12 @@ export default function Expertise() {
         className="bg-[var(--white)] py-16 sm:py-20 lg:py-[105px]"
         id="expertise-domains"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-9 lg:grid-cols-12 lg:gap-10 xl:gap-12">
 
             {/* Image */}
             <div className="lg:col-span-5">
-              <div className="group relative h-[340px] overflow-hidden bg-[var(--cream)] sm:h-[450px] lg:h-[500px] xl:h-[590px]">
+              <div className="group relative h-[340px] overflow-hidden bg-[var(--cream)] sm:h-[450px] lg:h-[450px] xl:h-[530px]">
                 <img
                   src="/images/p3.webp"
                   alt="Cinematic visual representing devotional storytelling"
@@ -199,42 +188,41 @@ export default function Expertise() {
                   </span>
                 </h2>
 
-                <p className="mb-7 text-[14px] leading-[1.85] text-[var(--text-secondary)] sm:text-[15px]">
+                <p className="mb-3 text-[14px] leading-[1.85] text-[var(--text-secondary)] sm:text-[15px]">
                   Devotional storytelling demands more than good visuals.
                   It demands accuracy, sensitivity and trust.
                 </p>
 
                 <div>
                   {devotionalApproach.map((item, index) => {
-                    const Icon = item.icon;
+                  
 
                     return (
                       <div
                         key={item.title}
-                        className="grid grid-cols-[38px_minmax(0,1fr)_20px] items-start gap-2.5 border-b border-[#eee5d8] py-4 sm:grid-cols-[44px_minmax(0,1fr)_25px] sm:gap-[15px] sm:py-[17px]"
+                        className="grid grid-cols-[36px_minmax(0,1fr)] items-start gap-3 border-b border-[#eee5d8] py-4 sm:grid-cols-[44px_minmax(0,1fr)] sm:gap-4 sm:py-[17px]"
                       >
-                        <div className="flex h-9 w-9 items-center justify-center border border-[var(--border-gold)] bg-[var(--ivory)] text-[var(--red-dark)] sm:h-[42px] sm:w-[42px]">
-                          <Icon size={19} strokeWidth={1.7} />
-                        </div>
+                        {/* Number */}
+                        <span className="pt-0.5 text-[10px] font-extrabold tracking-wide text-[#b9a58a] sm:text-[11px]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
 
-                        <div>
-                          <h3 className="mb-1.5 text-[13px] font-extrabold sm:text-sm">
+                        {/* Content */}
+                        <div className="min-w-0">
+                          <h3 className="mb-1.5 text-[13px] font-extrabold leading-snug text-[var(--text-primary)] sm:text-sm">
                             {item.title}
                           </h3>
-                          <p className="m-0 max-w-[460px] text-[11px] leading-[1.75] text-[var(--text-secondary)] sm:text-xs">
+
+                          <p className="m-0 line-clamp-2 text-[11px] leading-[1.75] text-[var(--text-secondary)] sm:text-xs">
                             {item.description}
                           </p>
                         </div>
-
-                        <span className="text-[10px] font-extrabold text-[#b9a58a]">
-                          0{index + 1}
-                        </span>
                       </div>
                     );
                   })}
                 </div>
 
-                <div className="mt-7 border-l-[3px] border-[var(--gold-dark)] bg-[var(--ivory)] p-5 sm:p-[22px]">
+                {/* <div className="mt-7 border-l-[3px] border-[var(--gold-dark)] bg-[var(--ivory)] p-5 sm:p-[22px]">
                   <span className="text-[10px] font-extrabold tracking-[1.5px] text-[var(--red-dark)]">
                     THEMES WE EXPLORE
                   </span>
@@ -243,7 +231,7 @@ export default function Expertise() {
                     legends, pilgrimage and sacred places, faith and human
                     transformation, and values-based family stories.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -253,7 +241,7 @@ export default function Expertise() {
 
       {/* FICTION STORYTELLING */}
       <section className="bg-[var(--ivory)] py-16 sm:py-20 lg:py-[105px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-9 lg:grid-cols-2 lg:gap-12">
 
             {/* Content */}
@@ -289,10 +277,7 @@ export default function Expertise() {
                         {genre}
                       </h3>
 
-                      <ArrowUpRight
-                        size={18}
-                        className="text-[var(--red-dark)] transition-transform duration-300 group-hover:translate-x-[3px] group-hover:-translate-y-[3px]"
-                      />
+
                     </div>
                   ))}
                 </div>
@@ -325,7 +310,7 @@ export default function Expertise() {
 
       {/* FORMATS */}
       <section className="bg-[var(--white)] py-16 sm:py-20 lg:py-[105px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* Heading */}
           <div className="mb-9 flex flex-col justify-between gap-4 md:mb-12 lg:flex-row lg:items-end lg:gap-10">

@@ -177,7 +177,7 @@ export default function Contact() {
 
       {/* CONTACT INFORMATION */}
       <section className="bg-[var(--white)] py-16 sm:py-20 lg:pt-[90px] lg:pb-[100px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <div className="mb-8 sm:mb-10">
             <span className="mb-4 inline-block text-[10px] font-extrabold tracking-[2px] text-[var(--gold-dark)] sm:text-sm">
@@ -239,7 +239,7 @@ export default function Contact() {
 
       {/* OFFICE LOCATIONS */}
       <section className="bg-[var(--ivory)] py-16 sm:py-20 lg:py-[95px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <div className="mb-9 flex flex-col justify-between gap-4 sm:mb-11 lg:flex-row lg:items-end lg:gap-9">
             <div>
@@ -315,7 +315,7 @@ export default function Contact() {
         className="bg-[var(--white)] py-16 sm:py-20 lg:py-[105px]"
         id="contact-form"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-12">
 
             {/* Form Intro */}
@@ -543,7 +543,7 @@ export default function Contact() {
 
       {/* FAQ */}
       <section className="bg-[var(--ivory)] py-16 sm:py-20 lg:py-[105px]" id="faqs">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-9 lg:grid-cols-12 lg:gap-10">
 
             {/* FAQ Intro */}
