@@ -17,37 +17,37 @@ const creativeRoles: {
   title: string;
   description: string;
 }[] = [
-  {
-    icon: PenTool,
-    title: "Writers",
-    description: "Developing stories, screenplays and dialogues.",
-  },
-  {
-    icon: Clapperboard,
-    title: "Directors",
-    description: "Shaping the creative vision of every project.",
-  },
-  {
-    icon: Camera,
-    title: "Cinematographers",
-    description: "Bringing stories to life through visuals.",
-  },
-  {
-    icon: Film,
-    title: "Editors",
-    description: "Crafting the final narrative through editing.",
-  },
-  {
-    icon: Music2,
-    title: "Composers",
-    description: "Creating music and sound that support each story.",
-  },
-  {
-    icon: Palette,
-    title: "Designers",
-    description: "Building the visual world of a production.",
-  },
-];
+    {
+      icon: PenTool,
+      title: "Writers",
+      description: "Developing stories, screenplays and dialogues.",
+    },
+    {
+      icon: Clapperboard,
+      title: "Directors",
+      description: "Shaping the creative vision of every project.",
+    },
+    {
+      icon: Camera,
+      title: "Cinematographers",
+      description: "Bringing stories to life through visuals.",
+    },
+    {
+      icon: Film,
+      title: "Editors",
+      description: "Crafting the final narrative through editing.",
+    },
+    {
+      icon: Music2,
+      title: "Composers",
+      description: "Creating music and sound that support each story.",
+    },
+    {
+      icon: Palette,
+      title: "Designers",
+      description: "Building the visual world of a production.",
+    },
+  ];
 
 export default function Team() {
   return (
@@ -99,234 +99,353 @@ export default function Team() {
       </section>
 
       {/* LEADERSHIP */}
+
+      {/* PROJECT LEADERSHIP & KEY PROFILES */}
       <section
-        className="bg-[var(--white)] py-16 sm:py-20 lg:py-[105px]"
         id="team-leadership"
+        className="bg-white py-16 sm:py-20 lg:py-[105px]"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="mb-9 sm:mb-11">
+          {/* SECTION HEADING */}
+          <div className="mb-10 sm:mb-14">
             <span className="mb-4 inline-block text-[10px] font-extrabold tracking-[2px] text-[var(--gold-dark)] sm:text-sm">
-              LEADERSHIP
+              THE PEOPLE BEHIND THE PROJECT
             </span>
 
-            <h2 className="max-w-[700px] font-heading text-[clamp(35px,4.5vw,55px)] font-semibold leading-[1.2]">
-              A Vision That
-              <span className="italic text-[var(--red-dark)]">
-                {" "}Leads the Way.
+            <h2 className="max-w-[800px] font-heading text-[clamp(35px,4.5vw,55px)] font-semibold leading-[1.2]">
+              The Minds Behind
+              <span className="block italic text-[var(--red-dark)]">
+                The Story.
               </span>
             </h2>
-          </div>
 
-          {/* Founder Card */}
-          <div className="grid items-center gap-8 border border-[var(--border-gold)] bg-[var(--ivory)] p-5 sm:p-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-[75px] lg:p-[35px]">
-
-            {/* Founder Visual */}
-            <div className="relative min-w-0">
-              <div className="relative flex min-h-[290px] items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_40%,rgba(249,197,38,0.18),transparent_45%),linear-gradient(145deg,var(--brown),var(--black))] sm:min-h-[340px] lg:min-h-[390px]">
-
-                {/* Decorative Circles */}
-                <span className="pointer-events-none absolute h-[190px] w-[190px] rounded-full border border-[rgba(249,197,38,0.3)] sm:h-[240px] sm:w-[240px]" />
-                <span className="pointer-events-none absolute h-[250px] w-[250px] rounded-full border border-[rgba(249,197,38,0.13)] sm:h-[310px] sm:w-[310px]" />
-
-                {/* Initials */}
-                <div className="relative z-[1] flex items-center font-heading text-[85px] font-medium tracking-[-12px] text-[var(--gold-light)] sm:text-[105px] sm:tracking-[-15px]">
-                  <span>S</span>
-                  <span className="text-white">K</span>
-                </div>
-
-                {/* Caption */}
-                <div className="absolute right-0 bottom-0 left-0 z-[2] flex flex-col gap-1.5 bg-gradient-to-t from-black/70 to-transparent px-5 pt-11 pb-5 text-white sm:px-[25px] sm:pt-[45px] sm:pb-[22px]">
-                  <span className="text-[9px] font-extrabold tracking-[1.8px] text-[var(--gold-light)]">
-                    SHGR ENTERTAINMENT
-                  </span>
-                  <strong className="font-heading text-[23px] font-medium">
-                    Leadership
-                  </strong>
-                </div>
-              </div>
-
-              <span className="absolute -top-3 -right-3 flex h-11 w-11 items-center justify-center bg-[var(--red-dark)] text-[11px] font-extrabold text-white sm:-top-[17px] sm:-right-[17px] sm:h-12 sm:w-12">
-                01
-              </span>
-            </div>
-
-            {/* Founder Details */}
-            <div className="py-2 sm:px-1 lg:py-5 lg:pr-[15px]">
-              <span className="mb-4 inline-block text-[10px] font-extrabold tracking-[1.7px] text-[var(--gold-dark)]">
-                FOUNDER / DIRECTOR*
-              </span>
-
-              <h3 className="mb-4 font-heading text-[31px] font-semibold sm:text-[36px] lg:text-[clamp(34px,4vw,48px)]">
-                Shashi Kulshreshtha
-              </h3>
-
-              <p className="max-w-[480px] text-[13px] leading-[1.8] text-[var(--text-secondary)] sm:text-sm">
-                The leadership behind SHGR Entertainment's vision
-                and creative direction.
-              </p>
-
-              <div className="mt-7 border-l-[3px] border-[var(--gold-dark)] bg-[var(--white)] px-5 py-5 sm:mt-[35px] sm:px-[25px] sm:py-[22px]">
-                <span className="text-[9px] font-extrabold tracking-[1.4px] text-[var(--red-dark)]">
-                  LEADERSHIP BIOGRAPHY
-                </span>
-
-                <p className="mt-2.5 mb-0 text-xs leading-[1.8] text-[var(--text-secondary)]">
-                  Add a short biography covering professional background,
-                  creative vision and role in the company.
-                </p>
-              </div>
-
-              <p className="mt-4 mb-0 text-[10px] italic text-[var(--text-secondary)]">
-                *Designation to be confirmed.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* CREATIVE TEAM */}
-      <section className="bg-[var(--ivory)] py-16 sm:py-20 lg:py-[105px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Heading */}
-          <div className="mb-9 flex flex-col justify-between gap-4 sm:mb-12 lg:mb-[55px] lg:flex-row lg:items-end lg:gap-11">
-            <div>
-              <span className="mb-4 inline-block text-[10px] font-extrabold tracking-[2px] text-[var(--gold-dark)] sm:text-sm">
-                CREATIVE & PRODUCTION TEAM
-              </span>
-
-              <h2 className="max-w-[700px] font-heading text-[clamp(35px,4.5vw,55px)] font-semibold leading-[1.2]">
-                Great Stories
-                <span className="block italic text-[var(--red-dark)]">
-                  Are Never Made Alone.
-                </span>
-              </h2>
-            </div>
-
-            <p className="mb-1 max-w-[410px] text-[12px] leading-[1.9] text-[var(--text-secondary)] sm:text-[13px]">
-              We work with a growing network of writers, directors,
-              cinematographers, editors, composers, designers and
-              production professionals, brought together for each
-              project according to its needs.
+            <p className="mt-5 max-w-[650px] text-[13px] leading-[1.9] text-[var(--text-secondary)] sm:text-sm">
+              Meet the creative minds bringing this story of faith,
+              devotion and inspiration to audiences through thoughtful
+              writing and committed production.
             </p>
           </div>
 
-          {/* Creative Role Cards */}
-          <div className="grid grid-cols-1 border-t border-l border-[var(--border-gold)] sm:grid-cols-2 lg:grid-cols-3">
-            {creativeRoles.map((role, index) => {
-              const Icon = role.icon;
+          {/* PROFILE 01 - SCRIPT WRITER */}
+          <article className="mb-10 overflow-hidden border border-[var(--border-gold)] bg-[var(--ivory)] lg:mb-14">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
 
-              return (
-                <article
-                  key={role.title}
-                  className="group relative min-h-[195px] overflow-hidden border-r border-b border-[var(--border-gold)] p-6 transition-colors duration-300 hover:bg-[var(--white)] sm:min-h-[220px] sm:p-7"
-                >
-                  <div className="mb-7 flex items-center justify-between">
-                    <span className="text-[10px] font-extrabold text-[var(--gold-dark)]">
-                      0{index + 1}
-                    </span>
+              {/* IMAGE LEFT */}
+              <div className="relative min-h-[380px] overflow-hidden sm:min-h-[480px] lg:min-h-[650px]">
+                <img
+                  src="/images/script-writer.jpeg"
+                  alt="Dr. Kumar Hridayesh - Script Writer"
+                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.04]"
+                />
 
-                    <Icon
-                      size={25}
-                      strokeWidth={1.5}
-                      className="text-[var(--red-dark)]"
-                    />
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
 
-                  <h3 className="mb-2.5 font-heading text-[22px] font-semibold sm:text-2xl">
-                    {role.title}
+                <div className="absolute bottom-0 left-0 z-10 p-6 sm:p-9">
+                  <span className="text-[10px] font-extrabold tracking-[2px] text-[var(--gold-light)]">
+                    PROFILE 01
+                  </span>
+                  <h3 className="mt-2 font-heading text-3xl font-semibold text-white sm:text-4xl">
+                    Dr. Kumar Hridayesh
                   </h3>
+                  <p className="mt-2 text-[10px] font-bold tracking-[1.5px] text-white/85">
+                    SCRIPT WRITER
+                  </p>
+                </div>
+              </div>
 
-                  <p className="m-0 max-w-[290px] text-xs leading-[1.8] text-[var(--text-secondary)]">
-                    {role.description}
+              {/* CONTENT RIGHT */}
+              <div className="flex flex-col justify-center p-6 sm:p-9 lg:p-12 xl:p-14">
+                <span className="mb-4 text-[10px] font-extrabold tracking-[1.8px] text-[var(--gold-dark)]">
+                  THE CREATIVE MIND
+                </span>
+
+                <h3 className="mb-2 font-heading text-[30px] font-semibold leading-tight text-[var(--brown)] sm:text-[36px]">
+                  Dr. Kumar Hridayesh
+                </h3>
+
+                <p className="mb-7 text-[10px] font-bold tracking-[1px] text-[var(--red-dark)]">
+                  HRIDESH KUMAR · HINDI POET · LYRICIST · AUTHOR
+                </p>
+
+                <div className="space-y-4 text-[12px] leading-[1.9] text-[var(--text-secondary)] sm:text-[13px]">
+                  <p>
+                    Dr. Kumar Hridayesh (Hridesh Kumar) is a Delhi-based Hindi
+                    poet, lyricist and author with a postgraduate degree in
+                    Hindi Literature and a doctoral research focus on the poet
+                    Rahim. Writing since childhood, he has composed poems,
+                    stories, articles, bhajans and songs, published in leading
+                    newspapers and magazines and in publications of the Delhi
+                    Development Authority, Ministry of Railways, Ministry of
+                    Culture and Delhi Government.
                   </p>
 
-                  <div className="mt-[22px] h-[2px] w-0 bg-[var(--gold-dark)] transition-all duration-300 group-hover:w-[45px]" />
-                </article>
-              );
-            })}
-          </div>
+                  <p>
+                    His book <strong className="text-[var(--brown)]">
+                      Chetna ke Swar
+                    </strong> was released by the Speaker of the Delhi
+                    Legislative Assembly in 2019 and approved by the Delhi
+                    Government in 2020 for Class 11–12 study in its schools.
+                    He has been honoured by the Rashtriya Kavi Sammelan for
+                    his poem <em>Nav Bharat</em>.
+                  </p>
 
-          {/* Network Note */}
-          <div className="mt-7 flex items-start gap-4 bg-[var(--brown)] px-5 py-5 text-white sm:mt-[30px] sm:gap-[18px] sm:px-[27px] sm:py-[23px]">
-            <Users
-              size={22}
-              strokeWidth={1.5}
-              className="mt-0.5 flex-none text-[var(--gold-light)]"
-            />
+                  <p>
+                    With a career in government and semi-government service
+                    as an officer and adviser, and over four years as an RWA
+                    president, he combines administrative experience with
+                    community leadership. He is also interested in painting
+                    and music.
+                  </p>
 
-            <p className="m-0 text-xs leading-[1.8] text-[var(--text-light)]">
-              Our creative and production network grows with every project,
-              bringing together the right talent for every story.
-            </p>
-          </div>
+                  <p>
+                    A lifelong devotee of Baba Neem Karoli and Hanuman, he
+                    has written bhajans and researched Baba&apos;s life, and
+                    has long wished to bring it to audiences as a serial.
+                  </p>
+                </div>
 
-        </div>
-      </section>
-
-      {/* FOUNDER'S NOTE */}
-      <section className="relative bg-[radial-gradient(circle_at_10%_90%,rgba(249,197,38,0.1),transparent_35%),linear-gradient(130deg,var(--black),var(--brown))] py-16 text-white sm:py-20 lg:py-[110px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-          <div className="grid gap-7 lg:grid-cols-[0.65fr_1.35fr] lg:gap-[65px]">
-
-            {/* Note Label */}
-            <div className="flex flex-row items-center gap-4 sm:gap-5 lg:flex-col lg:items-start">
-              <span className="mb-0 text-[10px] font-extrabold tracking-[2px] text-[var(--gold-light)] sm:text-xs lg:mb-0">
-                A MESSAGE FROM OUR FOUNDER
-              </span>
-
-              <Quote
-                size={38}
-                strokeWidth={1.2}
-                className="flex-none text-[var(--gold-light)] opacity-80 sm:size-[42px] lg:mt-5"
-              />
+                <div className="mt-7 border-l-[3px] border-[var(--gold-dark)] bg-white px-5 py-4">
+                  <span className="text-[9px] font-extrabold tracking-[1.4px] text-[var(--red-dark)]">
+                    CREATIVE VISION
+                  </span>
+                  <p className="mt-2 mb-0 font-heading text-[16px] italic leading-[1.6] text-[var(--brown)] sm:text-[18px]">
+                    Bringing the life and teachings of Baba Neem Karoli
+                    to audiences through storytelling.
+                  </p>
+                </div>
+              </div>
             </div>
+          </article>
 
-            {/* Note Content */}
-            <div>
-              <h2 className="mb-7 font-heading text-[clamp(32px,4vw,49px)] leading-[1.2] sm:mb-[30px]">
-                A belief in stories
-                <span className="block text-[var(--gold-light)]">
-                  that bring us together.
+          {/* PROFILE 02 - PRODUCER */}
+          <article className="overflow-hidden border border-[var(--border-gold)] bg-[var(--ivory)]">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+
+              {/* CONTENT LEFT */}
+              <div className="order-2 flex flex-col justify-center p-6 sm:p-9 lg:order-1 lg:p-12 xl:p-14">
+                <span className="mb-4 text-[10px] font-extrabold tracking-[1.8px] text-[var(--gold-dark)]">
+                  THE PROJECT VISION
                 </span>
-              </h2>
 
-              <blockquote className="m-0 font-heading text-[17px] italic leading-[1.8] text-[rgba(255,248,233,0.88)] sm:text-[18px] lg:text-[clamp(18px,2vw,23px)] lg:leading-[1.9]">
-                “Cinema has the power to comfort, to inspire and to bring
-                families together. At SHGR Entertainment, our aim is to
-                create films and series that carry meaning and are made
-                with honesty and care. We are building this company step
-                by step, with a commitment to quality in every frame and
-                respect for every story we tell. We invite writers,
-                creators and partners who share this belief to walk
-                with us.”
-              </blockquote>
+                <h3 className="mb-2 font-heading text-[30px] font-semibold leading-tight text-[var(--brown)] sm:text-[36px]">
+                  Shashi Kulshreshtha
+                </h3>
 
-              <div className="mt-8 flex items-center gap-3.5 sm:mt-[35px]">
-                <span className="h-px w-[38px] bg-[var(--gold-light)]" />
+                <p className="mb-7 text-[10px] font-bold tracking-[1px] text-[var(--red-dark)]">
+                  PRODUCER · SHGR ENTERTAINMENT
+                </p>
 
-                <div className="flex flex-col gap-1">
-                  <strong className="font-heading text-[17px] font-medium sm:text-lg">
-                    Shashi Kulshreshtha
-                  </strong>
+                <div className="space-y-4 text-[12px] leading-[1.9] text-[var(--text-secondary)] sm:text-[13px]">
+                  <p>
+                    Shashi Kulshreshtha is the driving force behind this
+                    project, a 26-episode fiction series on the life and
+                    teachings of Baba Neem Karoli. A devotee of Baba and
+                    Hanuman, she has nurtured this project from its earliest
+                    idea and brings to it the conviction and commitment
+                    that a story of this nature demands.
+                  </p>
 
-                  <small className="text-[9px] tracking-[1.2px] text-[var(--gold-light)] uppercase">
-                    Founder / Director*
-                  </small>
+                  <p>
+                    As producer, she leads the project&apos;s vision, creative
+                    direction and partnerships, working alongside an
+                    Executive Producer and Line Producer, who bring
+                    experience in television and film production.
+                  </p>
+
+                  <p>
+                    The series is written by{" "}
+                    <strong className="text-[var(--brown)]">
+                      Dr. Kumar Hridayesh
+                    </strong>
+                    , a published Hindi author whose book{" "}
+                    <em>Chetna ke Swar</em> is approved by the Delhi
+                    Government for school libraries and Class 11–12 study.
+                  </p>
+
+                  <p>
+                    Her focus is to bring Baba Neem Karoli&apos;s message to
+                    audiences in a manner that is authentic, respectful
+                    and professionally produced.
+                  </p>
+                </div>
+
+                <div className="mt-7 border-l-[3px] border-[var(--gold-dark)] bg-white px-5 py-4">
+                  <span className="text-[9px] font-extrabold tracking-[1.4px] text-[var(--red-dark)]">
+                    PRODUCER&apos;S VISION
+                  </span>
+                  <p className="mt-2 mb-0 font-heading text-[16px] italic leading-[1.6] text-[var(--brown)] sm:text-[18px]">
+                    A story of faith and devotion, presented with authenticity,
+                    respect and professional excellence.
+                  </p>
                 </div>
               </div>
 
-              <p className="mt-3 mb-0 ml-[52px] text-[10px] italic text-[rgba(255,248,233,0.5)]">
-                *Designation to be confirmed.
-              </p>
-            </div>
+              {/* IMAGE RIGHT */}
+              <div className="relative order-1 min-h-[380px] overflow-hidden sm:min-h-[480px] lg:order-2 lg:min-h-[650px]">
+                <img
+                  src="/images/producer.jpeg"
+                  alt="Shashi Kulshreshtha - Producer"
+                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.04]"
+                />
 
-          </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 z-10 p-6 sm:p-9">
+                  <span className="text-[10px] font-extrabold tracking-[2px] text-[var(--gold-light)]">
+                    PROFILE 02
+                  </span>
+                  <h3 className="mt-2 font-heading text-3xl font-semibold text-white sm:text-4xl">
+                    Shashi Kulshreshtha
+                  </h3>
+                  <p className="mt-2 text-[10px] font-bold tracking-[1.5px] text-white/85">
+                    PRODUCER
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
         </div>
       </section>
+
+
+      {/* CREATIVE TEAM */}
+     {/* CREATIVE DIRECTORS */}
+<section className="relative overflow-hidden bg-[#FFF8E9] py-16 sm:py-20 lg:py-28">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* Section Heading */}
+    <div className="mb-12 flex flex-col justify-between gap-5 lg:mb-16 lg:flex-row lg:items-end">
+      <div>
+        <span className="mb-4 inline-block text-[10px] font-extrabold tracking-[3px] text-[var(--gold-dark)]">
+          THE CREATIVE FORCE
+        </span>
+
+        <h2 className="font-heading text-[clamp(38px,5vw,66px)] leading-[1.08] text-[var(--brown)]">
+          Behind Every Story,
+          <span className="block italic text-[var(--red-dark)]">
+            A Vision.
+          </span>
+        </h2>
+      </div>
+
+      <p className="max-w-[390px] text-sm leading-7 text-[var(--text-secondary)]">
+        Meet the creative minds guiding our stories from imagination
+        to the screen, with a shared passion for meaningful cinema.
+      </p>
+    </div>
+
+    {/* Director 01 */}
+    <article className="group mb-8 grid overflow-hidden bg-[#24150E] lg:grid-cols-2">
+
+      <div className="relative min-h-[420px] overflow-hidden sm:min-h-[550px] lg:min-h-[610px]">
+        <img
+          src="/images/jayant-director.png"
+          alt="Jayant - Director"
+          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.035]"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+
+        <span className="absolute bottom-6 left-7 font-heading text-6xl font-semibold text-white/35 sm:text-8xl">
+          01
+        </span>
+      </div>
+
+      <div className="relative flex flex-col justify-center px-7 py-12 text-white sm:px-12 lg:px-14 lg:py-16">
+        <span className="mb-7 flex items-center gap-3 text-[10px] font-bold tracking-[2.5px] text-[var(--gold-light)]">
+          <span className="h-px w-9 bg-[var(--gold)]" />
+          DIRECTOR
+        </span>
+
+        <h3 className="font-heading text-[clamp(42px,5vw,65px)] leading-[1.1]">
+          Jayant
+        </h3>
+
+        <p className="mt-7 max-w-[420px] text-sm leading-8 text-white/70">
+          Every story begins with an idea. Through creative direction
+          and a thoughtful approach to storytelling, Jayant brings
+          ideas to life, shaping narratives into engaging cinematic
+          experiences.
+        </p>
+
+        <div className="mt-10 flex items-center gap-4">
+          <span className="h-px w-12 bg-[var(--gold)]" />
+          <span className="text-[9px] font-bold tracking-[2px] text-[var(--gold-light)]">
+            CREATIVE VISION · STORYTELLING
+          </span>
+        </div>
+
+        <span className="pointer-events-none absolute bottom-3 right-7 font-heading text-[110px] leading-none text-white/[0.035] sm:text-[160px]">
+          J
+        </span>
+      </div>
+    </article>
+
+    {/* Director 02 */}
+    <article className="group grid overflow-hidden bg-[#24150E] lg:grid-cols-2">
+
+      <div className="relative order-1 flex flex-col justify-center px-7 py-12 text-white sm:px-12 lg:order-1 lg:px-14 lg:py-16">
+        <span className="mb-7 flex items-center gap-3 text-[10px] font-bold tracking-[2.5px] text-[var(--gold-light)]">
+          <span className="h-px w-9 bg-[var(--gold)]" />
+          DIRECTOR
+        </span>
+
+        <h3 className="font-heading text-[clamp(42px,5vw,65px)] leading-[1.1]">
+          Kaushis
+        </h3>
+
+        <p className="mt-7 max-w-[420px] text-sm leading-8 text-white/70">
+          Great direction is about bringing every creative element
+          together. With a focus on narrative flow, visual expression
+          and audience connection, Kaushis contributes to shaping
+          stories for the screen.
+        </p>
+
+        <div className="mt-10 flex items-center gap-4">
+          <span className="h-px w-12 bg-[var(--gold)]" />
+          <span className="text-[9px] font-bold tracking-[2px] text-[var(--gold-light)]">
+            CREATIVE VISION · CINEMA
+          </span>
+        </div>
+
+        <span className="pointer-events-none absolute bottom-3 right-7 font-heading text-[110px] leading-none text-white/[0.035] sm:text-[160px]">
+          K
+        </span>
+      </div>
+
+      <div className="relative order-2 min-h-[420px] overflow-hidden sm:min-h-[550px] lg:min-h-[610px]">
+        <img
+          src="/images/kaushis-director.png"
+          alt="Kaushis - Director"
+          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.035]"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+
+        <span className="absolute bottom-6 right-7 font-heading text-6xl font-semibold text-white/35 sm:text-8xl">
+          02
+        </span>
+      </div>
+    </article>
+
+    {/* Bottom Statement */}
+    <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-[var(--border-gold)] pt-8 sm:flex-row">
+      <p className="m-0 max-w-[520px] font-heading text-xl italic text-[var(--brown)] sm:text-2xl">
+        Two creative perspectives. One shared passion for cinema.
+      </p>
+
+      <span className="text-[9px] font-extrabold tracking-[2px] text-[var(--gold-dark)]">
+        SHGR ENTERTAINMENT
+      </span>
+    </div>
+
+  </div>
+</section>
+
+    
 
       {/* CLOSING */}
       <section className="bg-[var(--white)] py-16 text-center sm:py-20 lg:py-[85px]">

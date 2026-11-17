@@ -9,6 +9,7 @@ import { Menu, X, ArrowRight, ArrowUpRight } from "lucide-react";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about-us" },
+  { name: "Our Projects", href: "/our-projects" },
   { name: "Our Expertise", href: "/our-expertise" },
   { name: "Our Services", href: "/our-services" },
   { name: "Our Team", href: "/our-team" },
@@ -50,21 +51,19 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`group relative flex h-full items-center whitespace-nowrap font-heading text-[13px] font-semibold transition-colors duration-300 xl:text-[14px] ${
-                  active
+                className={`group relative flex h-full items-center whitespace-nowrap font-heading text-[13px] font-semibold transition-colors duration-300 xl:text-[14px] ${active
                     ? "text-[var(--red)]"
                     : "text-[var(--red-dark)] hover:text-[var(--red)]"
-                }`}
+                  }`}
               >
                 {link.name}
 
                 {/* Hover Underline */}
                 <span
-                  className={`absolute bottom-[17px] left-0 h-[2px] w-full origin-left bg-[image:var(--gradient-red)] transition-transform duration-300 ease-in-out ${
-                    active
+                  className={`absolute bottom-[17px] left-0 h-[2px] w-full origin-left bg-[image:var(--gradient-red)] transition-transform duration-300 ease-in-out ${active
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100"
-                  }`}
+                    }`}
                 />
               </Link>
             );
@@ -100,11 +99,10 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <div
-        className={`absolute left-0 top-full w-full border-b border-[var(--border-gold)] bg-[var(--black)] p-5 shadow-[var(--shadow-dark)] transition-all duration-300 lg:hidden ${
-          menuOpen
+        className={`absolute left-0 top-full w-full border-b border-[var(--border-gold)] bg-[var(--black)] p-5 shadow-[var(--shadow-dark)] transition-all duration-300 lg:hidden ${menuOpen
             ? "visible translate-y-0 opacity-100"
             : "invisible pointer-events-none -translate-y-3 opacity-0"
-        }`}
+          }`}
       >
         <nav className="mx-auto flex max-w-[600px] flex-col">
           {navLinks.map((link) => {
@@ -116,11 +114,10 @@ export default function Header() {
                 href={link.href}
                 onClick={closeMenu}
                 aria-current={active ? "page" : undefined}
-                className={`flex items-center justify-between border-b border-[rgba(249,197,38,0.15)] py-4 font-heading text-[14px] font-semibold transition-colors ${
-                  active
+                className={`flex items-center justify-between border-b border-[rgba(249,197,38,0.15)] py-4 font-heading text-[14px] font-semibold transition-colors ${active
                     ? "text-[var(--gold)]"
                     : "text-[var(--ivory)] hover:text-[var(--gold)]"
-                }`}
+                  }`}
               >
                 {link.name}
                 <ArrowUpRight

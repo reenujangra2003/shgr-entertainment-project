@@ -3,36 +3,37 @@ import { ArrowUpRight } from "lucide-react";
 import styles from "../../css/Projects.module.css";
 
 const projects = [
-    {
-        number: "01",
-        title: "Devotional Cinema",
-        category: "DEVOTIONAL",
-        format: "FEATURE FILM",
-        description:
-            "Stories inspired by faith, spiritual heritage and the timeless values of Indian culture.",
-        image: "/images/p1.jpg",
-        alt: "Indian heritage architecture in a cinematic setting",
-    },
-    {
-        number: "02",
-        title: "Fiction & Drama",
-        category: "FICTION",
-        format: "WEB SERIES",
-        description:
-            "Emotion-driven narratives exploring human relationships, society and contemporary life.",
-        image: "/images/p2.avif",
-        alt: "Cinematic fiction and drama storytelling scene",
-    },
-    {
-        number: "03",
-        title: "Stories for the Screen",
-        category: "ORIGINAL CONTENT",
-        format: "FILM & SERIES",
-        description:
-            "A creative space for distinctive stories developed with imagination, purpose and craft.",
-        image: "/images/p3.webp",
-        alt: "Professional film camera on a production set",
-    },
+  {
+    number: "01",
+    title: "The Path of Faith",
+    category: "DEVOTIONAL",
+    format: "FEATURE FILM",
+    description:
+      "A cinematic exploration of faith, devotion and the timeless spiritual traditions that continue to inspire generations.",
+    image: "/images/p1.jpg",
+    alt: "Spiritual Indian temple architecture in a cinematic setting",
+  },
+  {
+    number: "02",
+    title: "Rishton Ke Dhaage",
+    category: "FAMILY DRAMA",
+    format: "WEB SERIES",
+    description:
+      "An emotional fictional narrative about family bonds, relationships and the choices that shape our lives.",
+    image: "/images/p2.avif",
+    alt: "Cinematic Indian family drama scene",
+  },
+  {
+    number: "03",
+    title: "Virasat – The Legacy",
+    category: "FICTION",
+    format: "DRAMA SERIES",
+    description:
+      "A story of heritage, identity and a family's journey to preserve its legacy through changing times.",
+    image: "/images/p3.webp",
+    alt: "Cinematic heritage architecture for a period drama",
+  },
+ 
 ];
 
 export default function Projects() {
