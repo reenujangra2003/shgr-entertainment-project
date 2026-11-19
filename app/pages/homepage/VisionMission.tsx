@@ -64,7 +64,7 @@ export default function VisionMission() {
           <div className="relative isolate min-h-[410px] overflow-hidden rounded-[10px] bg-[var(--brown)] sm:min-h-[450px] md:min-h-[490px] lg:min-h-[550px]">
             <div className={`absolute inset-0 overflow-hidden ${styles.visionImage}`}>
               <img
-                src="/images/about.webp"
+                src="/images/vision.jpeg"
                 alt="Film crew working on a cinematic production set"
                 className="block h-full w-full object-cover object-center"
               />

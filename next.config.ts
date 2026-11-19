@@ -1,12 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+
+  images: {
+    unoptimized: true,
+  },
+
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+
+  // Static export ke saath cacheComponents aur PPR compatible nahi hain.
+  // Isliye cacheComponents aur partialPrefetching remove karo.
+
   turbopack: {
     rules: {
       "*.css": {

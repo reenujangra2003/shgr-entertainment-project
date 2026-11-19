@@ -16,7 +16,7 @@ const projects = [
     title: "The Path of Faith",
     description:
       "A devotional story exploring faith, belief and the spiritual strength that guides people through life's most challenging moments.",
-    image: "/images/p1.jpg",
+    image: "/images/p1.png",
     imageAlt: "Traditional heritage architecture",
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     title: "Rishton Ke Dhaage",
     description:
       "A character-driven story exploring family relationships, emotions and the invisible bonds that connect generations.",
-    image: "/images/p2.avif",
+    image: "/images/p2.png",
     imageAlt: "Cinematic fiction and drama visual",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     title: "Virasat – The Legacy",
     description:
       "A story of family, heritage and the choices that shape the legacy we leave behind.",
-    image: "/images/p3.webp",
+    image: "/images/p3.png",
     imageAlt: "Cinematic storytelling visual",
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     title: "Anant – Stories of Devotion",
     description:
       "An episodic collection inspired by devotion, timeless values and stories that continue to touch generations.",
-    image: "/images/p4.webp",
+    image: "/images/p4.png",
     imageAlt: "Devotional storytelling visual",
   },
 ];
@@ -158,13 +158,13 @@ export default function OurProjects() {
               <article key={project.number} className="group min-w-0">
 
                 {/* IMAGE */}
-                <div className="relative aspect-[16/10] overflow-hidden border border-[var(--border-gold)] bg-[var(--cream)]">
+                <div className="relative aspect-[18/10] overflow-hidden border border-[var(--border-gold)] bg-[var(--cream)]">
                   <Image
                     src={project.image}
                     alt={project.imageAlt}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-70" />

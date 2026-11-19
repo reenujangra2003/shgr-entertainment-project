@@ -58,11 +58,12 @@ const contactCards: {
     linkText: "+91 98681 16252",
   },
   {
-    icon: Mail,
-    label: "EMAIL ENQUIRIES",
-    title: "Write to Us",
-    placeholder: "Official email to be added",
-  },
+  icon: Mail,
+  label: "EMAIL ENQUIRIES",
+  title: "Write to Us",
+  link: "mailto:shashi.kul545@gmail.com",
+  linkText: "shashi.kul545@gmail.com",
+},
   {
     icon: MessageCircle,
     label: "START A DISCUSSION",
