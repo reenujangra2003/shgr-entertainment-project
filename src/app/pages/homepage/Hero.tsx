@@ -94,7 +94,7 @@ export default function Hero() {
               {/* Main Image */}
               <div className={`relative z-[1] h-full w-full overflow-hidden rounded-t-[180px] rounded-b-[4px] shadow-[var(--shadow-dark)] sm:rounded-t-[220px] ${styles.image}`}>
                 <img
-                  src="/images/hero1.jpeg"
+                  src="/images/hero.webp"
                   alt="Indian heritage architecture representing cinematic storytelling"
                   className="h-full w-full object-cover object-center"
                 />
@@ -113,7 +113,7 @@ export default function Hero() {
             {/* Floating Card */}
             <div className="absolute -bottom-1 left-[-15px] z-[3] flex items-center gap-3 border-l-[3px] border-[var(--gold)] bg-white px-3 py-3 shadow-[var(--shadow-dark)] sm:bottom-[55px] sm:left-[-35px] sm:gap-[14px] sm:px-[22px] sm:py-[18px] lg:left-[-25px] xl:left-[-55px]">
 
-              <div className="flex h-[35px] w-[35px] shrink-0 items-center justify-center bg-[var(--cream)] text-[var(--red-dark)] sm:h-[42px] sm:w-[42px]">
+              <div className="flex h-[35px] w-[35px] shrink-0 items-center justify-center bg-[var(--cream)] text-[var(--gold-dark)] sm:h-[42px] sm:w-[42px]">
                 <Film size={23} strokeWidth={1.8} />
               </div>
 

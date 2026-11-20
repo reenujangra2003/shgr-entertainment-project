@@ -92,7 +92,7 @@ const services: {
 
 export default function Services() {
   return (
-    <main className="custom-services-page w-full overflow-hidden bg-[var(--ivory)] font-body text-[var(--brown)]">
+    <main className="custom-services-page w-full overflow-hidden bg-[var(--white)] font-body text-[var(--brown)]">
 
       {/* HERO */}
       <section className="bg-[radial-gradient(circle_at_88%_20%,rgba(249,197,38,0.15),transparent_28%),var(--ivory)] pt-14 sm:pt-16 lg:pt-20">

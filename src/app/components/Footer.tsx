@@ -12,16 +12,16 @@ import {
   ArrowRight,
   Send,
 } from "lucide-react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const quickLinks = [
- { label: "Home", href: "/" },
-  { label: "About Us", href: "/about-us" },
-  { label: "Our Projects", href: "/our-projects" },
-  { label: "Our Expertise", href: "/our-expertise" },
-  { label: "Our Services", href: "/our-services" },
-  { label: "Our Team", href: "/our-team" },
-  { label: "Contact Us", href: "/contact-us" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/#about" },
+  { label: "What We Do", href: "/#services" },
+  { label: "Our Genres", href: "/#genres" },
+  { label: "Why SHGR", href: "/#why-shgr" },
+  { label: "Our Process", href: "/#process" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Collaborate", href: "/#collaborate" },
 ];
 
 type FormData = {
@@ -179,27 +179,6 @@ export default function Footer() {
               devotional and fiction stories rooted in culture, emotion
               and craft.
             </p>
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href="https://www.instagram.com/shgr_ent/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
-              >
-                <FaInstagram size={17} />
-              </a>
-
-              <a
-                href="https://www.facebook.com/share/19QPtZ9W61/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
-              >
-                <FaFacebook size={16} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -296,12 +275,9 @@ export default function Footer() {
                   <span className="mb-1 block text-[9px] font-extrabold tracking-[1px] text-[var(--gold-light)]">
                     EMAIL
                   </span>
-                  <a
-                    href="mailto:shashi.kul545@gmail.com"
-                    className="mt-1 block font-body text-[12px] font-bold text-white transition-colors hover:text-[var(--gold-light)]"
-                  >
-                    shashi.kul545@gmail.com
-                  </a>
+                  <p className="font-body text-[12px] text-white/85">
+                    Email details to be added
+                  </p>
                 </div>
               </div>
             </div>

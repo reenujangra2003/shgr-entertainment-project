@@ -101,10 +101,10 @@ const formats: {
 
 export default function Expertise() {
   return (
-    <main className="custom-expertise w-full overflow-hidden bg-[var(--ivory)] font-body text-[var(--brown)]">
+    <main className="custom-expertise w-full overflow-hidden bg-[var(--white)] font-body text-[var(--brown)]">
 
       {/* HERO */}
-      <section className="bg-[radial-gradient(circle_at_88%_20%,rgba(249,197,38,0.15),transparent_28%),var(--ivory)] pt-14 sm:pt-16 lg:pt-20">
+      <section className="relative bg-[radial-gradient(circle_at_85%_15%,rgba(249,197,38,0.13),transparent_28%),var(--ivory)] pt-14 sm:pt-16 lg:pt-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="pb-16 sm:pb-20 lg:pb-[95px]">
             <span className="mb-5 inline-block text-xs font-extrabold tracking-[2.5px] text-[var(--gold-dark)] sm:mb-[22px] sm:text-sm">
@@ -158,7 +158,7 @@ export default function Expertise() {
             <div className="lg:col-span-5">
               <div className="group relative h-[340px] overflow-hidden bg-[var(--cream)] sm:h-[450px] lg:h-[450px] xl:h-[530px]">
                 <img
-                  src="/images/expertise1.jpeg"
+                  src="/images/p3.webp"
                   alt="Cinematic visual representing devotional storytelling"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 />
@@ -288,7 +288,7 @@ export default function Expertise() {
             <div className="order-1 lg:order-2">
               <div className="group relative h-[340px] overflow-hidden bg-[var(--cream)] sm:h-[450px] lg:h-[450px] xl:h-[530px]">
                 <img
-                  src="/images/expertise2.jpeg"
+                  src="/images/p2.avif"
                   alt="Cinematic fiction storytelling"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 />

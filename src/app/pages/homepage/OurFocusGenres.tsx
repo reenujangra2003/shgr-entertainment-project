@@ -15,7 +15,7 @@ const genres = [
         subtitle: "FAITH • CULTURE • SPIRITUALITY",
         description:
             "Spiritual stories carry a timeless place in Indian culture. We develop devotional films that present faith, devotion and wisdom with depth, cultural accuracy and cinematic quality, so they resonate with families and audiences of all ages.",
-        image: "/images/genre1.jpeg",
+        image: "/images/genre1.webp",
         icon: Sparkles,
         imageLabel: "STORIES ROOTED IN FAITH",
     },
@@ -25,7 +25,7 @@ const genres = [
         subtitle: "EMOTION • CHARACTERS • STORYTELLING",
         description:
             "We create original fiction built on strong characters, emotional truth and well-structured storytelling, suited to theatrical, television and OTT audiences.",
-        image: "/images/genre2.jpeg",
+        image: "/images/genre2.webp",
         icon: Clapperboard,
         imageLabel: "STORIES THAT CONNECT",
     },

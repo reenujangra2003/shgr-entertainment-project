@@ -50,7 +50,7 @@ export default function About() {
             {/* Image Frame */}
             <div className={`relative z-[2] h-[285px] w-full overflow-hidden bg-[var(--cream)] sm:h-[350px] lg:h-[495px] ${styles.imageFrame}`}>
               <img
-                src="/images/about.png"
+                src="/images/about.webp"
                 alt="Film production crew working behind the camera on a shoot"
                 className="h-full w-full object-cover object-center"
               />
