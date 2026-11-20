@@ -197,36 +197,6 @@ export default function Footer() {
               An Indian film and web series production house creating devotional
               and fiction stories rooted in culture, emotion and craft.
             </p>
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href="https://www.instagram.com/shgr_ent/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
-              >
-                <FaInstagram size={17} />
-              </a>
-
-              <a
-                href="https://www.facebook.com/share/19QPtZ9W61/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
-              >
-                <FaFacebook size={16} />
-              </a>
-              <a
-                href="https://www.youtube.com/@SahityaSansar-pe8pw"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Youtuve"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
-              >
-                <FaYoutube size={16} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -274,6 +244,30 @@ export default function Footer() {
                         Noida, Gautam Budh Nagar,
                         <br />
                         Uttar Pradesh – 201301.
+                      </>
+                    )}
+                  </p>
+                </div>
+              </div>
+
+
+              <div className="flex items-start gap-3">
+                <MapPin
+                  size={18}
+                  className="mt-1 shrink-0 text-[var(--gold-light)]"
+                />
+                <div>
+                  <span className="mb-1 block text-[9px] font-extrabold tracking-[1px] text-[var(--gold-light)]">
+                    DELHI ADDRESS
+                  </span>
+                  <p className="font-body text-[12px] leading-[1.75] text-white/85">
+                    {profile?.address1 ?? (
+                      <>
+                        8B/F/F, Guru Nanak Market,
+                        <br />
+                        Lajpat Nagar-4, Defence Colony,
+                        <br />
+                        South-East, NCT Of Delhi- 110024
                       </>
                     )}
                   </p>

@@ -110,6 +110,7 @@ export interface Profile {
   email: string;
   phone: string;
   address:string;
+  address1:string;
   description: string;
   logo: string;
   facebook: string;

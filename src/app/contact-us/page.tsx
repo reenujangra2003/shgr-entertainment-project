@@ -105,7 +105,18 @@ export default function Contact() {
       ],
 
     },
+     {
+      number: "02",
+      label: "DELHI OFFICE",
+      city: "Delhi",
+      address: [
+        profile?.address1 || " 8B/F/F, Guru Nanak Market, Lajpat Nagar-4, Defence Colony, South-East, NCT Of Delhi- 110024"
+      ],
+
+    },
   ];
+
+
 
   return (
     <main className="custom-contact-page w-full overflow-hidden bg-[var(--white)] font-body text-[var(--brown)]">
