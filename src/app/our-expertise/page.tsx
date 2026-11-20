@@ -158,7 +158,7 @@ export default function Expertise() {
             <div className="lg:col-span-5">
               <div className="group relative h-[340px] overflow-hidden bg-[var(--cream)] sm:h-[450px] lg:h-[450px] xl:h-[530px]">
                 <img
-                  src="/images/p3.webp"
+                  src="/images/p3.pngs"
                   alt="Cinematic visual representing devotional storytelling"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 />

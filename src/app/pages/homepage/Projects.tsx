@@ -20,7 +20,7 @@ const projects = [
     format: "WEB SERIES",
     description:
       "An emotional fictional narrative about family bonds, relationships and the choices that shape our lives.",
-    image: "/images/p2.avif",
+    image: "/images/p2.png",
     alt: "Cinematic Indian family drama scene",
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     format: "DRAMA SERIES",
     description:
       "A story of heritage, identity and a family's journey to preserve its legacy through changing times.",
-    image: "/images/p3.webp",
+    image: "/images/p3.png",
     alt: "Cinematic heritage architecture for a period drama",
   },
  

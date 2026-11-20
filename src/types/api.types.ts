@@ -78,5 +78,47 @@ export interface ContactFormPayload {
 
 export interface ContactFormResponse {
   code: number;
+  message: string | Record<string, string[]>;
+}
+
+
+// enquiry 
+// Add these interfaces to your existing src/types/api.types.ts
+// Do not replace other types already defined in that file.
+export interface EnquiryFormPayload {
+  interested_in: "partnership" | "career";
+  fullname: string;
+  email: string;
+  phone: string;
+  proposal: string;
+  file: File;
+  role?: string;
+}
+
+export interface EnquiryFormResponse {
+  code: number;
+  message: string | Record<string, string[]>;
+}
+
+
+// proifle 
+
+
+export interface Profile {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  description: string;
+  logo: string;
+  facebook: string;
+  instagram: string;
+  twitter: string;
+  youtube: string;
+}
+
+export interface ProfileResponse {
+  code: number;
   message: string;
+  data: Profile;
 }

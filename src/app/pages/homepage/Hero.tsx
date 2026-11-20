@@ -94,7 +94,7 @@ export default function Hero() {
               {/* Main Image */}
               <div className={`relative z-[1] h-full w-full overflow-hidden rounded-t-[180px] rounded-b-[4px] shadow-[var(--shadow-dark)] sm:rounded-t-[220px] ${styles.image}`}>
                 <img
-                  src="/images/hero.webp"
+                  src="/images/hero.png"
                   alt="Indian heritage architecture representing cinematic storytelling"
                   className="h-full w-full object-cover object-center"
                 />

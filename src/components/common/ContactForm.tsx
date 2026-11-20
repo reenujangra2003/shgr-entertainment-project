@@ -3,6 +3,7 @@
 
 import { useRef, useState } from "react";
 import type { FormEvent } from "react";
+import type { ContactFormPayload } from "@/types/api.types";
 import {
   ArrowUpRight,
   CheckCircle2,
@@ -35,17 +36,16 @@ export default function ContactForm({
     if (submittingRef.current) return;
 
     const form = event.currentTarget;
-
     if (!form.reportValidity()) return;
 
-    const formData = new FormData(form);
-
-    const payload = {
-      fullname: String(formData.get("fullname") ?? "").trim(),
-      email: String(formData.get("email") ?? "").trim(),
-      phone: String(formData.get("phone") ?? "").trim(),
-      subject: String(formData.get("subject") ?? "").trim(),
-      message: String(formData.get("message") ?? "").trim(),
+    // FormData here only reads input values. The service sends JSON.
+    const formValues = new FormData(form);
+    const payload: ContactFormPayload = {
+      fullname: String(formValues.get("fullname") ?? "").trim(),
+      email: String(formValues.get("email") ?? "").trim(),
+      phone: String(formValues.get("phone") ?? "").trim(),
+      subject: String(formValues.get("subject") ?? "").trim(),
+      message: String(formValues.get("message") ?? "").trim(),
     };
 
     submittingRef.current = true;
@@ -54,23 +54,35 @@ export default function ContactForm({
     setSubmitError(null);
 
     try {
+      // submitContactForm sends application/json, not multipart/form-data.
       const response = await submitContactForm(payload);
 
       if (response.code !== 200) {
-        throw new Error("Submission was not accepted.");
+        // The backend may return validation messages as an object.
+        const message = response.message;
+        const fieldMessages =
+          typeof message === "object" && message !== null
+            ? Object.values(message).flat().filter(
+                (value): value is string => typeof value === "string"
+              )
+            : [];
+
+        setSubmitError(
+          fieldMessages.length > 0
+            ? fieldMessages.join(" ")
+            : typeof message === "string" && message.trim()
+              ? message
+              : "Unable to send your message. Please try again."
+        );
+        return;
       }
 
       setSubmitted(true);
       form.reset();
     } catch (error: unknown) {
+      // The service already normalizes Axios errors; this also covers raw errors.
       const apiError = normalizeApiError(error);
-
-      setSubmitError(
-        apiError.message ===
-          "An unexpected error occurred. Please try again."
-          ? "Unable to send your message. Please try again."
-          : apiError.message
-      );
+      setSubmitError(apiError.message);
     } finally {
       submittingRef.current = false;
       setLoading(false);

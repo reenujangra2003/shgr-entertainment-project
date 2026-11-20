@@ -12,6 +12,8 @@ import {
   ArrowRight,
   Send,
 } from "lucide-react";
+import { useProfile } from "@/context/ProfileContext";
+
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -42,7 +44,10 @@ const initialForm: FormData = {
   message: "",
 };
 
-export default function Footer() {
+export default  function Footer() {
+ const profile = useProfile();
+
+  console.log("Shared Profile:", profile);
   const [form, setForm] = useState<FormData>(initialForm);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
