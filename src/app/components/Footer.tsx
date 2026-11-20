@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, type ChangeEvent, type FormEvent } from "react";
@@ -13,7 +12,6 @@ import {
   Send,
 } from "lucide-react";
 import { useProfile } from "@/context/ProfileContext";
-
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -44,8 +42,8 @@ const initialForm: FormData = {
   message: "",
 };
 
-export default  function Footer() {
- const profile = useProfile();
+export default function Footer() {
+  const profile = useProfile();
 
   console.log("Shared Profile:", profile);
   const [form, setForm] = useState<FormData>(initialForm);
@@ -58,7 +56,7 @@ export default  function Footer() {
   }, []);
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 
@@ -130,7 +128,6 @@ export default  function Footer() {
       id="contact"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-
         {/* Contact CTA */}
         <div className="flex flex-col items-start justify-between gap-7 border-b border-white/30 py-10 sm:py-12 lg:flex-row lg:items-center lg:py-9">
           <div>
@@ -156,7 +153,6 @@ export default  function Footer() {
 
         {/* Footer Main Grid */}
         <div className="grid grid-cols-1 gap-10 py-12 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[1.1fr_0.7fr_1.1fr_1.3fr] lg:gap-9 lg:py-14 xl:gap-10">
-
           {/* Brand */}
           <div className="max-w-[400px]">
             <Link
@@ -180,9 +176,8 @@ export default  function Footer() {
             </h3>
 
             <p className="font-body text-[13px] leading-[1.9] text-white/85">
-              An Indian film and web series production house creating
-              devotional and fiction stories rooted in culture, emotion
-              and craft.
+              An Indian film and web series production house creating devotional
+              and fiction stories rooted in culture, emotion and craft.
             </p>
           </div>
 
@@ -213,7 +208,6 @@ export default  function Footer() {
             </h4>
 
             <div className="space-y-5">
-
               {/* Registered Office */}
               <div className="flex items-start gap-3">
                 <MapPin
@@ -225,8 +219,8 @@ export default  function Footer() {
                     REGISTERED OFFICE
                   </span>
                   <p className="font-body text-[12px] leading-[1.75] text-white/85">
-                    545, Arun Vihar, Sector 37, Noida,
-                    Gautam Budh Nagar, Uttar Pradesh – 201301
+                    545, Arun Vihar, Sector 37, Noida, Gautam Budh Nagar, Uttar
+                    Pradesh – 201301
                   </p>
                 </div>
               </div>
@@ -242,8 +236,7 @@ export default  function Footer() {
                     DELHI OFFICE
                   </span>
                   <p className="font-body text-[12px] leading-[1.75] text-white/85">
-                    171, First Floor, AGCR Enclave,
-                    Delhi – 110092
+                    171, First Floor, AGCR Enclave, Delhi – 110092
                   </p>
                 </div>
               </div>
@@ -303,8 +296,8 @@ export default  function Footer() {
                 className="mb-4 border border-[var(--gold-light)]/40 bg-white/10 p-3 text-[11px] leading-[1.6] text-[var(--gold-light)]"
                 role="status"
               >
-                Your details have been validated. Please connect the contact
-                API to receive enquiries.
+                Your details have been validated. Please connect the contact API
+                to receive enquiries.
               </div>
             )}
 
