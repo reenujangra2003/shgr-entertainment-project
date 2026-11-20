@@ -109,6 +109,7 @@ export interface Profile {
   name: string;
   email: string;
   phone: string;
+  address:string;
   description: string;
   logo: string;
   facebook: string;

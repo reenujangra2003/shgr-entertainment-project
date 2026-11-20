@@ -12,6 +12,7 @@ import {
   Send,
 } from "lucide-react";
 import { useProfile } from "@/context/ProfileContext";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -44,6 +45,23 @@ const initialForm: FormData = {
 
 export default function Footer() {
   const profile = useProfile();
+  const socialLinks = [
+    {
+      name: "Instagram",
+      url: profile?.instagram,
+      icon: FaInstagram,
+    },
+    {
+      name: "Facebook",
+      url: profile?.facebook,
+      icon: FaFacebook,
+    },
+    {
+      name: "YouTube",
+      url: profile?.youtube,
+      icon: FaYoutube,
+    },
+  ].filter((social) => social.url);
 
   console.log("Shared Profile:", profile);
   const [form, setForm] = useState<FormData>(initialForm);
@@ -179,6 +197,36 @@ export default function Footer() {
               An Indian film and web series production house creating devotional
               and fiction stories rooted in culture, emotion and craft.
             </p>
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href="https://www.instagram.com/shgr_ent/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
+              >
+                <FaInstagram size={17} />
+              </a>
+
+              <a
+                href="https://www.facebook.com/share/19QPtZ9W61/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
+              >
+                <FaFacebook size={16} />
+              </a>
+              <a
+                href="https://www.youtube.com/@SahityaSansar-pe8pw"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Youtuve"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
+              >
+                <FaYoutube size={16} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -208,7 +256,7 @@ export default function Footer() {
             </h4>
 
             <div className="space-y-5">
-              {/* Registered Office */}
+              {/*  Office */}
               <div className="flex items-start gap-3">
                 <MapPin
                   size={18}
@@ -216,27 +264,18 @@ export default function Footer() {
                 />
                 <div>
                   <span className="mb-1 block text-[9px] font-extrabold tracking-[1px] text-[var(--gold-light)]">
-                    REGISTERED OFFICE
+                    OFFICE ADDRESS
                   </span>
                   <p className="font-body text-[12px] leading-[1.75] text-white/85">
-                    545, Arun Vihar, Sector 37, Noida, Gautam Budh Nagar, Uttar
-                    Pradesh – 201301
-                  </p>
-                </div>
-              </div>
-
-              {/* Delhi Office */}
-              <div className="flex items-start gap-3">
-                <MapPin
-                  size={18}
-                  className="mt-1 shrink-0 text-[var(--gold-light)]"
-                />
-                <div>
-                  <span className="mb-1 block text-[9px] font-extrabold tracking-[1px] text-[var(--gold-light)]">
-                    DELHI OFFICE
-                  </span>
-                  <p className="font-body text-[12px] leading-[1.75] text-white/85">
-                    171, First Floor, AGCR Enclave, Delhi – 110092
+                    {profile?.address ?? (
+                      <>
+                        545, Arun Vihar, Sector 37,
+                        <br />
+                        Noida, Gautam Budh Nagar,
+                        <br />
+                        Uttar Pradesh – 201301.
+                      </>
+                    )}
                   </p>
                 </div>
               </div>
@@ -255,10 +294,10 @@ export default function Footer() {
                     Shashi Kulshreshtha
                   </p>
                   <a
-                    href="tel:+919868116252"
+                    href="tel:+{profile?.phone}"
                     className="mt-1 block font-body text-[12px] font-bold text-white transition-colors hover:text-[var(--gold-light)]"
                   >
-                    +91 98681 16252
+                    +91 {profile?.phone}
                   </a>
                 </div>
               </div>
@@ -274,7 +313,7 @@ export default function Footer() {
                     EMAIL
                   </span>
                   <p className="font-body text-[12px] text-white/85">
-                    Email details to be added
+                    {profile?.email}
                   </p>
                 </div>
               </div>
@@ -282,7 +321,7 @@ export default function Footer() {
           </div>
 
           {/* Enquiry Form */}
-          <div>
+          {/* <div>
             <h4 className="mb-5 font-heading text-[21px] font-semibold text-[var(--gold-light)]">
               Send an Enquiry
             </h4>
@@ -302,7 +341,7 @@ export default function Footer() {
             )}
 
             <form onSubmit={handleSubmit} noValidate>
-              {/* Name & Email */}
+             
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                 <div className="min-w-0">
                   <input
@@ -337,7 +376,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Phone & Subject */}
+            
               <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                 <div className="min-w-0">
                   <input
@@ -372,7 +411,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Message */}
+           
               <div className="mt-3">
                 <textarea
                   name="message"
@@ -389,7 +428,7 @@ export default function Footer() {
                 )}
               </div>
 
-              {/* Submit */}
+          
               <button
                 type="submit"
                 className="group mt-2 flex w-full items-center justify-between bg-white px-4 py-3 text-[10px] font-extrabold tracking-[1px] text-[var(--red-dark)] transition-all duration-300 hover:bg-[var(--gold-light)]"
@@ -401,6 +440,32 @@ export default function Footer() {
                 />
               </button>
             </form>
+          </div> */}
+
+
+          <div>
+            <h4 className="mb-6 font-heading text-[21px] font-semibold text-[var(--gold-light)]">
+              Get In Touch
+            </h4>
+
+            <div className="mt-6 flex items-center gap-3">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--black)]"
+                  >
+                    <Icon size={17} />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
 

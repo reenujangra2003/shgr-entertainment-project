@@ -12,6 +12,7 @@ import {
 
 import { submitContactForm } from "@/services/contact.service";
 import { normalizeApiError } from "@/lib/api/error";
+import { useProfile } from "@/context/ProfileContext";
 
 interface ContactFormProps {
   enquiryTypes: string[];
@@ -20,6 +21,8 @@ interface ContactFormProps {
 export default function ContactForm({
   enquiryTypes,
 }: ContactFormProps) {
+
+   const profile = useProfile();
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(
@@ -150,10 +153,10 @@ export default function ContactForm({
               </span>
 
               <a
-                href="tel:+919868116252"
+             href={`tel:+91${profile?.phone}`}
                 className="inline-flex items-center gap-2.5 text-lg font-extrabold text-[var(--red-dark)] no-underline"
               >
-                +91 98681 16252
+                +91 {profile?.phone}
                 <ArrowUpRight size={15} />
               </a>
             </div>
@@ -240,6 +243,7 @@ export default function ContactForm({
                     name="phone"
                     placeholder="Enter your phone number"
                     autoComplete="tel"
+                     maxLength={10}
                     required
                     className={inputClass}
                   />

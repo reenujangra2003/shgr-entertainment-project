@@ -16,6 +16,7 @@ import {
   Send,
   CheckCircle2,
 } from "lucide-react";
+import { useProfile } from "@/context/ProfileContext";
 
 const partnerTypes = [
   {
@@ -69,6 +70,8 @@ const careerRoles = [
   "Other",
 ];
 
+
+
 const inputClass =
   "block min-w-0 w-full rounded-[3px] border border-[#e8dfd2] bg-[#fffdf8] px-[14px] py-[13px] text-[12px] text-[var(--brown)] outline-none transition placeholder:text-[#a08f80] focus:border-[var(--gold-dark)] focus:bg-white focus:ring-[3px] focus:ring-[rgba(201,138,8,0.10)]";
 
@@ -76,6 +79,8 @@ const labelClass =
   "mb-[9px] block text-[9px] font-extrabold tracking-[1px] text-[var(--brown)]";
 
 export default function Partner() {
+   const profile = useProfile();
+
   const [formType, setFormType] = useState("Partnership Enquiry");
   const [fileName, setFileName] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -316,7 +321,7 @@ export default function Partner() {
                   CAREERS &amp; GENERAL ENQUIRIES
                 </span>
                 <strong className="text-[15px] text-[var(--brown)]">
-                  Email address to be added
+                  {profile?.email}
                 </strong>
                 <small className="text-[10px] leading-[1.6] text-[var(--text-secondary)]">
                   Please replace this placeholder with the official SHGR
@@ -413,6 +418,7 @@ export default function Partner() {
                   <input
                     type="tel"
                     id="partner-phone"
+                    maxLength={10}
                     name="phone"
                     required
                     placeholder="Enter your phone number"

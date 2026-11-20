@@ -13,6 +13,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import ContactForm from "@/components/common/ContactForm";
+import { useProfile } from "@/context/ProfileContext";
 
 const faqs = [
   {
@@ -39,58 +40,7 @@ const faqs = [
   },
 ];
 
-const contactCards: {
-  icon: LucideIcon;
-  label: string;
-  title: string;
-  link?: string;
-  linkText?: string;
-  placeholder?: string;
-}[] = [
-  {
-    icon: Phone,
-    label: "CALL OUR TEAM",
-    title: "Let's Talk",
-    link: "tel:+919868116252",
-    linkText: "+91 98681 16252",
-  },
-  {
-    icon: Mail,
-    label: "EMAIL ENQUIRIES",
-    title: "Write to Us",
-    placeholder: "Official email to be added",
-  },
-  {
-    icon: MessageCircle,
-    label: "START A DISCUSSION",
-    title: "Share Your Idea",
-    link: "#contact-form",
-    linkText: "Send an Enquiry",
-  },
-];
 
-const offices = [
-  {
-    number: "01",
-    label: "REGISTERED OFFICE",
-    city: "Noida",
-    address: [
-      "545, Arun Vihar, Sector 37,",
-      "Noida, Gautam Budh Nagar,",
-      "Uttar Pradesh – 201301.",
-    ],
-    mapLink:
-      "https://www.google.com/maps/search/?api=1&query=545+Arun+Vihar+Sector+37+Noida+201301",
-  },
-  {
-    number: "02",
-    label: "DELHI OFFICE",
-    city: "Delhi",
-    address: ["171, First Floor, AGCR Enclave,", "Delhi – 110092."],
-    mapLink:
-      "https://www.google.com/maps/search/?api=1&query=171+AGCR+Enclave+Delhi+110092",
-  },
-];
 
 const enquiryTypes = [
   "General Enquiry",
@@ -102,6 +52,8 @@ const enquiryTypes = [
 ];
 
 export default function Contact() {
+  const profile = useProfile();
+
   const [activeFaq, setActiveFaq] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
@@ -117,6 +69,43 @@ export default function Contact() {
     setSubmitted(true);
     form.reset();
   };
+
+
+  const contactCards = [
+    {
+      icon: Phone,
+      label: "CALL OUR TEAM",
+      title: "Let's Talk",
+      link: profile?.phone ? `tel:+91${profile?.phone}` : "+91 98681 16252",
+      linkText: profile?.phone || "Phone number not available",
+    },
+    {
+      icon: Mail,
+      label: "EMAIL ENQUIRIES",
+      title: "Write to Us",
+      link: profile?.email ? `mailto:${profile.email}` : "shashi.kul545@gmail.com",
+      linkText: profile?.email || "Email not available",
+    },
+    {
+      icon: MessageCircle,
+      label: "START A DISCUSSION",
+      title: "Share Your Idea",
+      link: "#contact-form",
+      linkText: "Send an Enquiry",
+    },
+  ];
+
+  const offices = [
+    {
+      number: "01",
+      label: "REGISTERED OFFICE",
+      city: "Noida",
+      address: [
+        profile?.address || "545, Arun Vihar, Sector 37, Noida, Gautam Budh Nagar, Uttar Pradesh – 201301"
+      ],
+
+    },
+  ];
 
   return (
     <main className="custom-contact-page w-full overflow-hidden bg-[var(--white)] font-body text-[var(--brown)]">
@@ -206,14 +195,11 @@ export default function Contact() {
                       className="group/link inline-flex items-center gap-2 text-xs font-extrabold text-[var(--red-dark)] no-underline"
                     >
                       {card.linkText}
-                      <ArrowUpRight
-                        size={15}
-                        className="transition-transform duration-300 group-hover/link:translate-x-[3px] group-hover/link:-translate-y-[3px]"
-                      />
+                      <ArrowUpRight size={15} />
                     </a>
                   ) : (
                     <p className="m-0 text-xs text-[var(--text-secondary)]">
-                      {card.placeholder}
+                      {card.linkText}
                     </p>
                   )}
                 </article>
@@ -272,18 +258,7 @@ export default function Contact() {
                   ))}
                 </p>
 
-                <a
-                  href={office.mapLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group/map inline-flex items-center gap-2 border-b border-[var(--gold-dark)] pb-[7px] text-[9px] font-extrabold tracking-[1px] text-[var(--red-dark)] no-underline"
-                >
-                  VIEW LOCATION
-                  <ArrowUpRight
-                    size={16}
-                    className="transition-transform duration-300 group-hover/map:translate-x-[3px] group-hover/map:-translate-y-[3px]"
-                  />
-                </a>
+
               </article>
             ))}
           </div>
@@ -357,9 +332,8 @@ export default function Contact() {
 
                         <ChevronDown
                           size={20}
-                          className={`text-[var(--red-dark)] transition-transform duration-300 ${
-                            isActive ? "rotate-180" : ""
-                          }`}
+                          className={`text-[var(--red-dark)] transition-transform duration-300 ${isActive ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
 
